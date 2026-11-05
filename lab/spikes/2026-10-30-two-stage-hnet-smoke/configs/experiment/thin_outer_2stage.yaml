@@ -1,0 +1,29 @@
+# @package _global_
+# "Thin outer stages" (D): the reference 2-stage layout with weak, short-range outer stages and the FLOPs moved into
+# the main network. Only the main network sees more than about 64 bytes / 32 chunks back.
+#   layout  T1 | T1 | T22 | T1 | T1 ; widths 256 | 256 | 512 ; windows 64 bytes, 32 chunks ; main global
+#   targets 3 x 3 ; LR 6.25e-4 x [3.03, 1.75, 0.72] as reflayout_2stage
+#   fwd FLOPs/byte at 3 x 3: 22.19M (reflayout_2stage 22.58M) ; 74.6M params (reflayout_2stage 41.8M)
+# Experiment: lab/experiments/refuted/2026-11-03-thin-outer-stages.md
+experiment:
+  name: thin_outer_2stage
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 1.75, 0.72]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 256, 512]
+  mlp_ratio: 2.75
+  mlp_multiple_of: 128
+  rope_dim: 32
+  main:
+    layers: 22
+  stages:
+    - enc_layout: T1
+      dec_layout: T1
+      window: 64
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layout: T1
+      dec_layout: T1
+      window: 32
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}

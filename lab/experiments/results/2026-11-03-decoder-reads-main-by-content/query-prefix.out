@@ -1,0 +1,6 @@
+read/reflayout_2stage_s0: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.012 k=3 0.222 | read rms 0.287 vs decoder-input rms 1.916 (o.weight rms 0.0334)
+read/reflayout_2stage_s1: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.100 k=3 0.349 | read rms 0.658 vs decoder-input rms 2.189 (o.weight rms 0.0499)
+read/reflayout_2stage_s2: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.173 k=3 0.392 | read rms 0.731 vs decoder-input rms 2.179 (o.weight rms 0.0522)
+synth/reflayout_2stage_s0: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.003 k=3 0.067
+synth/reflayout_2stage_s1: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.017 k=3 0.414
+synth/reflayout_2stage_s2: stage-1 query has seen >= 1 letter of the word, by k: k=0 0.000 k=1 0.001 k=2 0.107 k=3 0.454

@@ -1,0 +1,18 @@
+# @package _global_
+# Deep-main compute split: stage 1 keeps only its router and chunk/dechunk (no blocks); its 4 blocks' FLOPs move
+# into the main network (8 -> 12 layers). Fwd FLOPs/byte -2.7% vs lookahead_2stage at ratios 3.1 x 2.0.
+# Experiment: lab/experiments/refuted/2026-10-31-deep-main-compute-split.md
+experiment:
+  name: lookahead_2stage_deep_main
+model:
+  main:
+    layers: 12
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 0
+      dec_layers: 0
+      window: 256
+      router: {name: lookahead, target_ratio: 2.0, loss_weight: 0.03, kwargs: {}}

@@ -1,0 +1,12 @@
+# @package _global_
+# Blog split 2-stage H-Net with Mamba-2 outer stages (blog_split_2stage_mamba) and the paper's Eq. 11 per-stage LR
+# (blog_split_2stage_eq11lr: 6.25e-4 x [3.03, 1.24, 0.76]).
+# Experiment: lab/experiments/refuted/2026-11-02-our-hnet-with-mamba2.md
+defaults:
+  - blog_split_2stage_mamba
+  - _self_
+experiment:
+  name: blog_split_2stage_mamba_eq11lr
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 1.24, 0.76]

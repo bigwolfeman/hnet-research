@@ -1,0 +1,9 @@
+# Synthetic recall language (hnet/synth.py), built by scripts/make_synth.py. Anchors (oracle bpb) in synth/recall/meta.json.
+defaults:
+  - bytes
+  - _self_
+train_sources:
+  - {name: synth, file: synth/recall/train.bin, weight: 1.0}
+val_sets:
+  - {name: synth, file: synth/recall/val.bin}
+primary_val: synth

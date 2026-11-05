@@ -1,0 +1,6 @@
+read/reflayout_2stage_s0: in-word chunk starts at k=1..3: 81 62 45 of 80314 80280 67499
+read/reflayout_2stage_s0: stage 0 part read: mean shuffle cost 0.8799 bits/byte  mean bits 1.3559  D -1.7240  per k -1.9063 -2.5476 -0.7182
+read/reflayout_2stage_s1: in-word chunk starts at k=1..3: 81 62 255 of 80314 80280 67499
+read/reflayout_2stage_s1: stage 0 part read: mean shuffle cost 0.4328 bits/byte  mean bits 1.7353  D -0.8094  per k -0.8290 -1.4237 -0.1754
+read/reflayout_2stage_s2: in-word chunk starts at k=1..3: 81 62 1286 of 80314 80280 67499
+read/reflayout_2stage_s2: stage 0 part read: mean shuffle cost 0.9453 bits/byte  mean bits 1.3678  D -1.7941  per k -2.1891 -2.7118 -0.4814

@@ -1,0 +1,18 @@
+windowed-growth-p1     loop1_1stage_s0          eventxo4 edu=1.7214 go=1.3037 sql=2.2894  s0: zero=3.0954 shuf=0.1251 fate=-2.9702 dead
+    gates: params=29240832 ratios=[3.980412551151332] flops/byte=23941318.86242676 bytes=262144000 loss=1.1957 step=4000 peak_mem_gb=13.1025
+windowed-growth-p1     loop1_1stage_s1          f06x96v5 edu=1.8427 go=1.7606 sql=3.3432  s0: zero=3.0979 shuf=0.0891 fate=-3.0088 dead
+    gates: params=29240832 ratios=[4.286165090213455] flops/byte=22728989.41027832 bytes=262144000 loss=1.3164 step=4000 peak_mem_gb=13.4340
+windowed-growth-p1     loop1_1stage_s2          eegrhaxj edu=1.7552 go=1.5445 sql=3.4526  s0: zero=2.6319 shuf=0.6580 fate=-1.9739 dead
+    gates: params=29240832 ratios=[3.896965530056676] flops/byte=24309443.175079346 bytes=262144000 loss=1.2520 step=4000 peak_mem_gb=11.3824
+windowed-growth        windowed_2stage_s0       pexwcxjc edu=1.4993 go=1.0237 sql=1.8724  s0: zero=3.4078 shuf=0.4487 fate=-2.9591 dead | s1: zero=0.1559 shuf=0.1946 fate=+0.0387 LIVE
+    gates: params=32651520 ratios=[4.032751956617887, 1.988642447418738] flops/byte=17921950.14855957 bytes=524288000 loss=1.1071 step=8000 peak_mem_gb=10.8990
+windowed-growth        windowed_2stage_s1       kdaydhpz edu=1.5352 go=1.0459 sql=1.9289  s0: zero=3.5768 shuf=0.3078 fate=-3.2690 dead | s1: zero=0.1051 shuf=0.1229 fate=+0.0178 LIVE
+    gates: params=32651520 ratios=[4.070148199327708, 1.9758564887603824] flops/byte=17880960.968048096 bytes=524288000 loss=1.0694 step=8000 peak_mem_gb=12.3845
+windowed-growth        windowed_2stage_s2       d2r9fr5p edu=1.4304 go=0.9569 sql=1.8436  s0: zero=1.6137 shuf=0.8690 fate=-0.7446 dead | s1: zero=0.2849 shuf=0.3397 fate=+0.0548 LIVE
+    gates: params=32651520 ratios=[3.928957899312061, 2.0471274066119505] flops/byte=17958685.55480957 bytes=524288000 loss=1.0145 step=8000 peak_mem_gb=11.1209
+windowed-scratch       windowed_2stage_s0       6hph3e1n edu=1.4841 go=0.9845 sql=1.7707  s0: zero=2.2175 shuf=0.9504 fate=-1.2671 dead | s1: zero=0.1314 shuf=0.0001 fate=-0.1313 dead
+    gates: params=32651520 ratios=[4.072266322837215, 1.975980538864716] flops/byte=17875492.72805786 bytes=786432000 loss=1.0537 step=12000 peak_mem_gb=13.8494
+windowed-scratch       windowed_2stage_s1       n5r5oyf7 edu=1.4998 go=1.0212 sql=1.9061  s0: zero=3.8939 shuf=0.4048 fate=-3.4891 dead | s1: zero=0.1185 shuf=-0.0000 fate=-0.1185 dead
+    gates: params=32651520 ratios=[4.002335958105431, 1.9856678363814129] flops/byte=18006662.334747314 bytes=786432000 loss=1.1363 step=12000 peak_mem_gb=13.7610
+windowed-scratch       windowed_2stage_s2       8vuocj2b edu=1.4621 go=1.0020 sql=1.8336  s0: zero=3.8145 shuf=0.5519 fate=-3.2626 dead | s1: zero=0.1781 shuf=0.0002 fate=-0.1780 dead
+    gates: params=32651520 ratios=[3.975718970975753, 1.9628411315109884] flops/byte=18160294.990264893 bytes=786432000 loss=0.9932 step=12000 peak_mem_gb=11.6036

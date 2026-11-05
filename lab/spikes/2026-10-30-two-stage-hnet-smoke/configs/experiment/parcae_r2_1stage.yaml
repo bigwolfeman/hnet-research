@@ -1,0 +1,29 @@
+# @package _global_
+# Parcae looped main on the 1-stage H-Net (loop1_1stage: stage 0 T2/T2 window 512, ratio 4, d 256 | 512):
+#   main = prelude T2 -> core T2 looped, mean recurrence 2 (Poisson per row, last 1 step(s) with grad) -> coda T2
+#   2 + 2 x 2 + 2 = 8 block passes per main position at eval, as loop1_1stage's T8 (hnet/parcae.py)
+# Experiment: lab/experiments/refuted/2026-11-04-parcae-coarse-main.md
+experiment:
+  name: parcae_r2_1stage
+train:
+  lr_mult: [1.5, 1.0]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 512]
+  main:
+    kind: parcae
+    layers: null
+    loops: 1
+    parcae:
+      prelude: 2
+      core: 2
+      coda: 2
+      mean_recurrence: 2
+      backprop_depth: 1
+      decay_init: 0.4472135954999579   # sqrt(1/5), the Parcae init table's ssm_decay
+      seed: ${seed}
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}

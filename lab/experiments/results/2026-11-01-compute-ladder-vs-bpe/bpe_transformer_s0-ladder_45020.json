@@ -1,0 +1,23 @@
+{
+ "budget_steps": 45020,
+ "branch_start": 36016,
+ "val/edu/bpb": 1.1769492232347591,
+ "val/edu/ce": 0.815799035747391,
+ "val/edu/ce_per_token": 3.716509461402893,
+ "val/edu/bytes_per_token": 4.555667877197266,
+ "val/ce": 0.815799035747391,
+ "val/bpb": 1.1769492232347591,
+ "flops/fwd_per_byte": 22127070.435612243,
+ "flops/train_per_byte": 66381211.306836724,
+ "flops/main_seq_len": 1024.0,
+ "flops/fwd_per_token": 100803584.0,
+ "val/go/bpb": 0.7324341378425421,
+ "val/go/ce": 0.5076846575914123,
+ "val/go/ce_per_token": 1.4676615297794342,
+ "val/go/bytes_per_token": 2.8908920288085938,
+ "val/sql/bpb": 1.4595188598888535,
+ "val/sql/ce": 1.0116613827060248,
+ "val/sql/ce_per_token": 2.1208906024694443,
+ "val/sql/bytes_per_token": 2.0964431762695312,
+ "ladder/train_bytes": 3145694204.105598
+}

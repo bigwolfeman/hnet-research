@@ -1,0 +1,28 @@
+H-Net s0 vs BPE s0: down-crossings ['2.10B'] up-crossings [] final gap -0.0251
+H-Net s0 vs BPE s1: down-crossings ['2.23B'] up-crossings [] final gap -0.0204
+     0.79B bpb 1.3901
+     1.97B bpb 1.2962
+     3.15B bpb 1.2656
+     6.03B bpb 1.2315
+     8.00B bpb 1.2204
+    10.09B bpb 1.2104
+    12.58B bpb 1.0905
+H-Net s1 vs BPE s0: down-crossings ['6.82B'] up-crossings [] final gap -0.0177
+H-Net s1 vs BPE s1: down-crossings ['6.82B', '7.21B'] up-crossings ['6.95B'] final gap -0.0130
+     0.79B bpb 1.4288
+     1.97B bpb 1.3497
+     3.15B bpb 1.3186
+     6.03B bpb 1.2597
+     8.00B bpb 1.2403
+    10.09B bpb 1.2248
+    12.58B bpb 1.0979
+H-Net s2 vs BPE s0: down-crossings ['2.23B', '2.49B'] up-crossings ['2.36B'] final gap -0.0243
+H-Net s2 vs BPE s1: down-crossings ['2.49B'] up-crossings [] final gap -0.0196
+     0.79B bpb 1.3911
+     1.97B bpb 1.2997
+     3.15B bpb 1.2676
+     6.03B bpb 1.2327
+     8.00B bpb 1.2201
+    10.09B bpb 1.2144
+    12.58B bpb 1.0913
+finals: H-Net {0: np.float64(1.0905), 1: np.float64(1.0979), 2: np.float64(1.0913)} BPE {0: np.float64(1.1156), 1: np.float64(1.1109)}

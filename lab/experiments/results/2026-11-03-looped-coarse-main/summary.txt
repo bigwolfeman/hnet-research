@@ -1,0 +1,18 @@
+looped-coarse-main     loop1_1stage_s0          zhpmgzlf edu=1.5046 go=1.0095 sql=1.8579  s0: zero=3.6300 shuf=0.4426 fate=-3.1874 dead
+    gates: params=29240832 ratios=[4.078126336913994] flops/byte=23531708.43371582 bytes=786432000 loss=1.0362 step=12000 peak_mem_gb=13.1025
+looped-coarse-main     loop1_1stage_s1          mzq49grx edu=1.5311 go=1.0365 sql=1.9177  s0: zero=3.8462 shuf=0.3693 fate=-3.4770 dead
+    gates: params=29240832 ratios=[3.99016705354085] flops/byte=23899415.782348633 bytes=786432000 loss=1.1288 step=12000 peak_mem_gb=12.7516
+looped-coarse-main     loop1_1stage_s2          zssjv0k6 edu=1.4135 go=0.9662 sql=1.7953  s0: zero=3.6605 shuf=1.0319 fate=-2.6286 dead
+    gates: params=29240832 ratios=[3.8988347103135945] flops/byte=24301003.103637695 bytes=786432000 loss=0.9341 step=12000 peak_mem_gb=11.7314
+looped-coarse-main     loop2_1stage_s0          zs57eeks edu=1.5754 go=1.0842 sql=1.9296  s0: zero=3.5942 shuf=0.0000 fate=-3.5942 dead
+    gates: params=16391680 ratios=[4.005546621030556] flops/byte=23833814.185333252 bytes=786432000 loss=1.0790 step=12000 peak_mem_gb=11.7794
+looped-coarse-main     loop2_1stage_s1          21onogh6 edu=1.5718 go=1.0914 sql=1.9806  s0: zero=3.3070 shuf=-0.0000 fate=-3.3070 dead
+    gates: params=16391680 ratios=[4.226510006247607] flops/byte=22950136.630889893 bytes=786432000 loss=1.1590 step=12000 peak_mem_gb=13.5425
+looped-coarse-main     loop2_1stage_s2          xxew6q3v edu=1.5816 go=1.1014 sql=1.9545  s0: zero=4.6533 shuf=0.0001 fate=-4.6532 dead
+    gates: params=16391680 ratios=[4.024903846892009] flops/byte=23752045.616333008 bytes=786432000 loss=1.0383 step=12000 peak_mem_gb=12.1119
+looped-coarse-main     loop4_1stage_s0          c5kmhv23 edu=1.5854 go=1.0916 sql=1.9571  s0: zero=4.3785 shuf=-0.0000 fate=-4.3785 dead
+    gates: params=9967104 ratios=[4.231165917473025] flops/byte=22932625.865356445 bytes=786432000 loss=1.0850 step=12000 peak_mem_gb=13.1451
+looped-coarse-main     loop4_1stage_s1          gqwuvf6d edu=1.5712 go=1.0879 sql=2.0012  s0: zero=3.5510 shuf=-0.0000 fate=-3.5510 dead
+    gates: params=9967104 ratios=[4.215143670305993] flops/byte=22993066.85986328 bytes=786432000 loss=1.1584 step=12000 peak_mem_gb=14.2368
+looped-coarse-main     loop4_1stage_s2          r36hg707 edu=1.5611 go=1.0724 sql=1.9267  s0: zero=4.1622 shuf=-0.0000 fate=-4.1622 dead
+    gates: params=9967104 ratios=[4.037363602060696] flops/byte=23699878.657348633 bytes=786432000 loss=1.0211 step=12000 peak_mem_gb=12.7488

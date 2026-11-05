@@ -1,0 +1,398 @@
+{
+ "checkpoint": "ignored/runs/reference-layout-vs-bpe/reflayout_2stage_s0/final.pt",
+ "gate_edu_bpb": 1.0904819349291714,
+ "cuts_per_byte_intact": [
+  0.3127861022949219,
+  0.11589813232421875
+ ],
+ "s0": {
+  "hidden_words": {
+   "join_rate": 0.7175706214689266,
+   "matched_control_rate": 0.22742088799798027,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.606425702811245,
+     "n_join": 249,
+     "control_rate": 0.22254253972718324,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.8102857142857143,
+     "n_join": 1750,
+     "control_rate": 0.4382450331125828,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.8151336656094246,
+     "n_join": 2207,
+     "control_rate": 0.21516995383969786,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.7067337948395217,
+     "n_join": 1589,
+     "control_rate": 0.15808871923127552,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.6765119549929677,
+     "n_join": 1422,
+     "control_rate": 0.13906171178745586,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.6388670338316287,
+     "n_join": 1271,
+     "control_rate": 0.14520311149524634,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.6580547112462006,
+     "n_join": 1316,
+     "control_rate": 0.17799939558779088,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.705420466058764,
+     "n_join": 7896,
+     "control_rate": 0.2356102635228849,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.8733909611951517,
+   "k0": 0.1843807113735414,
+   "k1": 0.20620772946859903,
+   "k2": 0.4130754798672247,
+   "k3+": 0.13977332447520552
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 1.9952924297851755,
+    "bits_nocut": 1.0435233029229054,
+    "n_cut": 8537,
+    "n_nocut": 32863
+   },
+   "k2": {
+    "bits_cut": 1.4230344573421077,
+    "bits_nocut": 0.5855157964064187,
+    "n_cut": 14311,
+    "n_nocut": 20334
+   },
+   "k3": {
+    "bits_cut": 1.345699452900912,
+    "bits_nocut": 0.41956095670888915,
+    "n_cut": 5175,
+    "n_nocut": 21727
+   },
+   "k4": {
+    "bits_cut": 1.6421676262450575,
+    "bits_nocut": 0.2648741987610071,
+    "n_cut": 2492,
+    "n_nocut": 18435
+   }
+  }
+ },
+ "s1": {
+  "hidden_words": {
+   "join_rate": 0.08,
+   "matched_control_rate": 0.11323426846202327,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.008032128514056224,
+     "n_join": 249,
+     "control_rate": 0.03220362818169034,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.08742857142857142,
+     "n_join": 1750,
+     "control_rate": 0.02847682119205298,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.08427729950158587,
+     "n_join": 2207,
+     "control_rate": 0.0353545950482585,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.04782882315921964,
+     "n_join": 1589,
+     "control_rate": 0.07108068974595234,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.08368495077355836,
+     "n_join": 1422,
+     "control_rate": 0.07987220447284345,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.08025177025963807,
+     "n_join": 1271,
+     "control_rate": 0.09226447709593777,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.07750759878419453,
+     "n_join": 1316,
+     "control_rate": 0.12450891508008462,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.085612968591692,
+     "n_join": 7896,
+     "control_rate": 0.17233009708737865,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.5222681574743964,
+   "k0": 0.017339144289798023,
+   "k1": 0.03147342995169082,
+   "k2": 0.012325010824072738,
+   "k3+": 0.056301996053505735
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 0.8383758184108677,
+    "bits_nocut": 1.2528297400215007,
+    "n_cut": 1303,
+    "n_nocut": 40097
+   },
+   "k2": {
+    "bits_cut": 1.8704643284812723,
+    "bits_nocut": 0.9197567378248152,
+    "n_cut": 427,
+    "n_nocut": 34218
+   },
+   "k3": {
+    "bits_cut": 1.3053859907961556,
+    "bits_nocut": 0.5758324997357255,
+    "n_cut": 807,
+    "n_nocut": 26095
+   },
+   "k4": {
+    "bits_cut": 2.0370064456070764,
+    "bits_nocut": 0.35736997582980357,
+    "n_cut": 891,
+    "n_nocut": 20036
+   }
+  }
+ },
+ "stage1_units": {
+  "words_per_chunk": {
+   "0": 0.06981317600786627,
+   "1": 0.5820058997050147,
+   "2": 0.24605047525401508,
+   "3": 0.08616846935431006,
+   "4": 0.013929859062602426,
+   "5": 0.0017699115044247787,
+   "6": 0.00019665683382497542
+  },
+  "top_multiword": [
+   [
+    " the first",
+    26
+   ],
+   [
+    " it is",
+    24
+   ],
+   [
+    " well as",
+    22
+   ],
+   [
+    ". It is",
+    17
+   ],
+   [
+    " they are",
+    17
+   ],
+   [
+    " to be",
+    15
+   ],
+   [
+    " the most",
+    15
+   ],
+   [
+    " it was",
+    14
+   ],
+   [
+    ". There are",
+    13
+   ],
+   [
+    ", according t",
+    12
+   ],
+   [
+    ", it is",
+    11
+   ],
+   [
+    ", such as",
+    11
+   ],
+   [
+    " children wit",
+    11
+   ],
+   [
+    " the last",
+    10
+   ],
+   [
+    " the fact",
+    9
+   ],
+   [
+    " able t",
+    9
+   ],
+   [
+    " a long",
+    9
+   ],
+   [
+    " more tha",
+    9
+   ],
+   [
+    " it t",
+    9
+   ],
+   [
+    " access t",
+    9
+   ],
+   [
+    " a good",
+    8
+   ],
+   [
+    " the University of",
+    8
+   ],
+   [
+    " the time",
+    8
+   ],
+   [
+    " a great",
+    7
+   ],
+   [
+    " of the most",
+    7
+   ],
+   [
+    " the following",
+    7
+   ],
+   [
+    " it has",
+    7
+   ],
+   [
+    " them t",
+    7
+   ],
+   [
+    " you have",
+    7
+   ],
+   [
+    " the early",
+    7
+   ],
+   [
+    " the \ufffd",
+    7
+   ],
+   [
+    " the world",
+    7
+   ],
+   [
+    " the past",
+    7
+   ],
+   [
+    " the same",
+    7
+   ],
+   [
+    " the right",
+    7
+   ],
+   [
+    " hundreds of",
+    7
+   ],
+   [
+    "/ 5 ",
+    7
+   ],
+   [
+    " it as",
+    6
+   ],
+   [
+    "\nIt is",
+    6
+   ],
+   [
+    ". It was",
+    6
+   ]
+  ]
+ },
+ "semantic": {
+  "sem/word_s0_auroc": 0.9424258394732715,
+  "sem/word_s0_n_pos": 42473,
+  "sem/word_s0_seen_frac": 1.0,
+  "sem/word_s1_auroc": 0.7181004293251791,
+  "sem/word_s1_n_pos": 39184,
+  "sem/word_s1_seen_frac": 0.3451596738189604,
+  "sem/hidden_s0_auroc": 0.8049060784770546,
+  "sem/hidden_s0_n_pos": 17774,
+  "sem/hidden_s0_seen_frac": 1.0,
+  "sem/hidden_s1_auroc": 0.5170133611781977,
+  "sem/hidden_s1_n_pos": 12730,
+  "sem/hidden_s1_seen_frac": 0.26212072213581367,
+  "sem/gotok_s0_auroc": 0.9426039031898585,
+  "sem/gotok_s0_n_pos": 9383,
+  "sem/gotok_s0_seen_frac": 1.0,
+  "sem/gotok_s1_auroc": 0.5695990241848149,
+  "sem/gotok_s1_n_pos": 9113,
+  "sem/gotok_s1_seen_frac": 0.39093577414745295,
+  "sem/morph_s0_auroc": 0.5734935937492686,
+  "sem/morph_s0_n_pos": 4793,
+  "sem/morph_s0_seen_frac": 1.0,
+  "sem/morph_s1_auroc": 0.5447906758019817,
+  "sem/morph_s1_n_pos": 557,
+  "sem/morph_s1_seen_frac": 0.12132635890478861,
+  "sem/phrase_s0_auroc": 0.3949667892635615,
+  "sem/phrase_s0_n_pos": 3634,
+  "sem/phrase_s0_seen_frac": 1.0,
+  "sem/phrase_s1_auroc": 0.49455906534407873,
+  "sem/phrase_s1_n_pos": 3510,
+  "sem/phrase_s1_seen_frac": 0.935050698821595
+ },
+ "s1_cuts_on_s0_cuts": 1.0
+}

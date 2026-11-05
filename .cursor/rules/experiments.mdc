@@ -1,0 +1,18 @@
+---
+description: Scientific-method experiment files — predictions before results, path-encoded status. Trial outcomes are not hypothesis verdicts.
+globs: lab/experiments/**/*.md
+alwaysApply: false
+---
+
+# Experiment documents
+
+Follow [lab/experiments/AGENTS.md](../../lab/experiments/AGENTS.md).
+
+- `planned/` — Question, Hypothesis, Predictions, Method. No Results.
+- `successes/` / `refuted/` — same Predictions plus Results, Verdict, Updated hypothesis. Status matches folder. `refuted/` holds not supported and can't tell. `mixed/` takes no new records.
+- `algorithms/` — method writeups, not runs.
+- `results/` — artifacts named after the run slug.
+
+Hypothesis verdicts are `supported`, `not supported`, and `can't tell`. Trial outcomes are `accepted`, `rejected`, `invalid`, `inconclusive`, and `crashed`. Do not mix these vocabularies.
+
+A campaign `program.md` must not copy predictions. Do not edit Predictions after artifacts exist. Do not backfill a planned file from a completed run.

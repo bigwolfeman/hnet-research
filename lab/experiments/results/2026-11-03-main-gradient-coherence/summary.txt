@@ -1,0 +1,24 @@
+ref_hnet_2stage_s1     w96mr9va edu   fate(shuf-zero s1)=-0.0517 dead  zero_s1=0.1067 shuf_s1=0.0550 shuf_s0=1.0180  urms[500..4000] l0=0.2105 l1=0.1986 l2=0.1681  gnorm l0=0.2050 l1=0.0561 l2=0.0065  n=71 logged=241
+    gates: val/edu/bpb=1.324937025743919 ratios=[3.0296470724202194, 2.9748418483119026] flops/byte=22513889.861816406 bytes=786432000 params=41801344 loss=1.009562849998474 step=12000
+ref_hnet_2stage_s2     26llvly2 edu   fate(shuf-zero s1)=-0.0105 dead  zero_s1=0.1441 shuf_s1=0.1336 shuf_s0=0.9825  urms[500..4000] l0=0.2115 l1=0.2053 l2=0.1923  gnorm l0=0.1987 l1=0.0520 l2=0.0080  n=71 logged=241
+    gates: val/edu/bpb=1.3262570033382068 ratios=[3.0453620044203196, 2.868822955982703] flops/byte=22746036.310768127 bytes=786432000 params=41801344 loss=0.9158564209938048 step=12000
+ref_hnet_2stage_s3     lo4o7up8 edu   fate(shuf-zero s1)=+0.0269 LIVE  zero_s1=0.1673 shuf_s1=0.1942 shuf_s0=1.1404  urms[500..4000] l0=0.2123 l1=0.2102 l2=0.2022  gnorm l0=0.2125 l1=0.0567 l2=0.0106  n=71 logged=241
+    gates: val/edu/bpb=1.317390061560926 ratios=[3.051450388788006, 2.8850212830264717] flops/byte=22671747.01560211 bytes=786432000 params=41801344 loss=0.9803006649017334 step=12000
+ref_hnet_2stage_s4     zhoalme6 edu   fate(shuf-zero s1)=-0.0229 dead  zero_s1=0.1179 shuf_s1=0.0950 shuf_s0=1.0085  urms[500..4000] l0=0.2114 l1=0.2077 l2=0.1896  gnorm l0=0.1973 l1=0.0499 l2=0.0075  n=71 logged=241
+    gates: val/edu/bpb=1.3215871315470398 ratios=[3.051787865911512, 2.9023930800875126] flops/byte=22620136.436805725 bytes=786432000 params=41801344 loss=0.9514815211296082 step=12000
+reflayout_2stage_s0    akqhdkkz edu   fate(shuf-zero s1)=+0.0230 LIVE  zero_s1=0.1346 shuf_s1=0.1576 shuf_s0=1.1099  urms[500..4000] l0=0.2108 l1=0.2064 l2=0.1874  gnorm l0=0.2012 l1=0.0597 l2=0.0087  n=71 logged=241
+    gates: val/edu/bpb=1.3133018995884709 ratios=[3.0227039492649177, 2.9284640969795204] flops/byte=22674017.058013916 bytes=786432000 params=41801344 loss=0.9411596655845642 step=12000
+reflayout_2stage_s1    ipcxldpl edu   fate(shuf-zero s1)=-0.0559 dead  zero_s1=0.0565 shuf_s1=0.0005 shuf_s0=0.4253  urms[500..4000] l0=0.2096 l1=0.1840 l2=0.1031  gnorm l0=0.2133 l1=0.0386 l2=0.0041  n=71 logged=241
+    gates: val/edu/bpb=1.3661449503017336 ratios=[3.041131329068034, 3.0127044596672725] flops/byte=22361831.947265625 bytes=786432000 params=41801344 loss=1.02978515625 step=12000
+reflayout_2stage_s2    zplsyk1o edu   fate(shuf-zero s1)=-0.0227 dead  zero_s1=0.1536 shuf_s1=0.1310 shuf_s0=1.1082  urms[500..4000] l0=0.2116 l1=0.2075 l2=0.1934  gnorm l0=0.1990 l1=0.0557 l2=0.0077  n=71 logged=241
+    gates: val/edu/bpb=1.3176746068567784 ratios=[3.01956165535433, 2.887465181058496] flops/byte=22806476.836097717 bytes=786432000 params=41801344 loss=0.9112524390220642 step=12000
+reflayout_2stage_s3    5d3o336d edu   fate(shuf-zero s1)=-0.0351 dead  zero_s1=0.1143 shuf_s1=0.0792 shuf_s0=0.8158  urms[500..4000] l0=0.2116 l1=0.2048 l2=0.1698  gnorm l0=0.2090 l1=0.0517 l2=0.0070  n=71 logged=241
+    gates: val/edu/bpb=1.3382946656369148 ratios=[3.0134871436741473, 2.978353162715056] flops/byte=22575274.0206604 bytes=786432000 params=41801344 loss=0.9877250790596008 step=12000
+reflayout_2stage_s4    7dffta9c edu   fate(shuf-zero s1)=-0.0172 dead  zero_s1=0.0657 shuf_s1=0.0485 shuf_s0=0.7032  urms[500..4000] l0=0.2129 l1=0.2035 l2=0.1865  gnorm l0=0.1988 l1=0.0475 l2=0.0060  n=71 logged=241
+    gates: val/edu/bpb=1.3560742428320278 ratios=[3.0260710966945057, 2.973169622555707] flops/byte=22534142.641944885 bytes=786432000 params=41801344 loss=0.9834309816360474 step=12000
+reflayout_2stage_s0    6779e4vx synth fate(shuf-zero s1)=+1.3999 LIVE  zero_s1=1.3684 shuf_s1=2.7683 shuf_s0=4.1971  urms[500..3000] l0=0.1981 l1=0.1735 l2=0.2163  gnorm l0=0.4989 l1=0.1295 l2=0.0878  n=51 logged=121
+    gates: val/recall/bpb=None ratios=[2.998201495417959, 2.9833997287314356] flops/byte=15127013.466041563 bytes=393216000 params=38552832 loss=1.4417238235473633 step=6000
+reflayout_2stage_s1    wrv1ej2g synth fate(shuf-zero s1)=+0.0529 LIVE  zero_s1=0.1648 shuf_s1=0.2177 shuf_s0=2.5733  urms[500..3000] l0=0.2007 l1=0.1773 l2=0.2169  gnorm l0=0.5926 l1=0.1507 l2=0.0584  n=51 logged=121
+    gates: val/recall/bpb=None ratios=[3.0008614151820847, 2.970795783030097] flops/byte=15152242.546508787 bytes=393216000 params=38552832 loss=1.448639988899231 step=6000
+reflayout_2stage_s2    w5rvq0rb synth fate(shuf-zero s1)=+0.0482 LIVE  zero_s1=0.2232 shuf_s1=0.2714 shuf_s0=2.0782  urms[500..3000] l0=0.1991 l1=0.1760 l2=0.2188  gnorm l0=0.6346 l1=0.1608 l2=0.0587  n=51 logged=121
+    gates: val/recall/bpb=None ratios=[2.9892525842261004, 2.9736360245498625] flops/byte=15186767.747680664 bytes=393216000 params=38552832 loss=1.4489275217056274 step=6000

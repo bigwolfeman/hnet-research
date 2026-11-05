@@ -1,0 +1,17 @@
+# @package _global_
+# Control: BPE-token Transformer (vocab 32768, tokenizer from scripts/prepare_bpe.py), d 512 like the H-Net main net.
+# Forward FLOPs/byte = fwd FLOPs per token / measured edu-val bytes per token (gate: 22.4M +-5%).
+# max_steps x batch x seq x measured mix bytes/token = data.token.target_train_bytes (checked in train.py, +-1%).
+experiment:
+  name: bpe_transformer
+model:
+  kind: token
+  vocab_size: 32768
+  d_model: [512]
+  stages: []
+  main: {layers: 9}            # 100.8M fwd FLOPs/token / 4.5273 bytes/token (edu val) = 22.27M/byte
+train:
+  seq_len: 1024                # tokens per row
+  batch_size: 16
+  max_steps: 11255             # 786.43M bytes / (16 x 1024 x 4.2647 mix bytes/token); see runs/bpe32k_meta.json
+  lr_mult: [1.0]

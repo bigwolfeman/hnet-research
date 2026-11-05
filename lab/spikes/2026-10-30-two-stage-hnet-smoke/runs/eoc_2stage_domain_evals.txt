@@ -1,0 +1,80 @@
+EVAL step 100: val bpb 3.5697 ratios [3.71, 2.17] flops/byte fwd 19.97M
+  edu: bpb 3.5697 bytes/chunk [3.71, 8.06] hnet/bpe [0.793, 1.721]
+  go: bpb 4.3812 bytes/chunk [2.41, 5.19] hnet/bpe [0.688, 1.484]
+  sql: bpb 5.6730 bytes/chunk [1.79, 3.78] hnet/bpe [0.667, 1.409]
+EVAL step 200: val bpb 2.9806 ratios [3.7, 2.01] flops/byte fwd 20.64M
+  edu: bpb 2.9806 bytes/chunk [3.7, 7.42] hnet/bpe [0.789, 1.584]
+  go: bpb 3.7774 bytes/chunk [2.55, 5.64] hnet/bpe [0.729, 1.611]
+  sql: bpb 5.1795 bytes/chunk [1.86, 3.94] hnet/bpe [0.693, 1.467]
+EVAL step 300: val bpb 2.6270 ratios [3.9, 2.06] flops/byte fwd 19.78M
+  edu: bpb 2.6270 bytes/chunk [3.9, 8.04] hnet/bpe [0.833, 1.716]
+  go: bpb 3.2903 bytes/chunk [2.63, 4.21] hnet/bpe [0.751, 1.204]
+  sql: bpb 5.0486 bytes/chunk [1.89, 2.97] hnet/bpe [0.704, 1.107]
+EVAL step 400: val bpb 2.4237 ratios [4.47, 2.03] flops/byte fwd 18.40M
+  edu: bpb 2.4237 bytes/chunk [4.47, 9.06] hnet/bpe [0.955, 1.935]
+  go: bpb 3.0331 bytes/chunk [2.72, 5.99] hnet/bpe [0.777, 1.712]
+  sql: bpb 4.8490 bytes/chunk [2.04, 3.63] hnet/bpe [0.758, 1.352]
+EVAL step 500: val bpb 2.3365 ratios [4.54, 1.89] flops/byte fwd 18.69M
+  edu: bpb 2.3365 bytes/chunk [4.54, 8.6] hnet/bpe [0.969, 1.836]
+  go: bpb 2.7987 bytes/chunk [2.86, 6.0] hnet/bpe [0.817, 1.714]
+  sql: bpb 4.8145 bytes/chunk [2.01, 3.8] hnet/bpe [0.75, 1.414]
+EVAL step 600: val bpb 2.2590 ratios [4.39, 1.99] flops/byte fwd 18.70M
+  edu: bpb 2.2590 bytes/chunk [4.39, 8.74] hnet/bpe [0.937, 1.867]
+  go: bpb 2.6630 bytes/chunk [2.68, 5.66] hnet/bpe [0.766, 1.618]
+  sql: bpb 4.6729 bytes/chunk [1.96, 3.93] hnet/bpe [0.732, 1.466]
+EVAL step 700: val bpb 2.1985 ratios [3.84, 1.93] flops/byte fwd 20.45M
+  edu: bpb 2.1985 bytes/chunk [3.84, 7.43] hnet/bpe [0.82, 1.587]
+  go: bpb 2.5873 bytes/chunk [2.72, 5.56] hnet/bpe [0.777, 1.589]
+  sql: bpb 4.6489 bytes/chunk [1.96, 3.45] hnet/bpe [0.73, 1.286]
+EVAL step 800: val bpb 2.1654 ratios [4.1, 2.15] flops/byte fwd 18.94M
+  edu: bpb 2.1654 bytes/chunk [4.1, 8.79] hnet/bpe [0.875, 1.878]
+  go: bpb 2.5085 bytes/chunk [2.66, 5.65] hnet/bpe [0.76, 1.616]
+  sql: bpb 4.5673 bytes/chunk [1.93, 3.84] hnet/bpe [0.718, 1.43]
+EVAL step 900: val bpb 2.1335 ratios [3.76, 2.41] flops/byte fwd 19.11M
+  edu: bpb 2.1335 bytes/chunk [3.76, 9.05] hnet/bpe [0.802, 1.932]
+  go: bpb 2.4975 bytes/chunk [3.19, 8.1] hnet/bpe [0.913, 2.315]
+  sql: bpb 4.5866 bytes/chunk [2.08, 3.41] hnet/bpe [0.773, 1.271]
+EVAL step 1000: val bpb 2.1030 ratios [4.16, 1.97] flops/byte fwd 19.36M
+  edu: bpb 2.1030 bytes/chunk [4.16, 8.2] hnet/bpe [0.889, 1.75]
+  go: bpb 2.4389 bytes/chunk [3.13, 7.37] hnet/bpe [0.894, 2.106]
+  sql: bpb 4.4765 bytes/chunk [2.03, 3.58] hnet/bpe [0.758, 1.335]
+EVAL step 1100: val bpb 2.0826 ratios [4.49, 1.96] flops/byte fwd 18.55M
+  edu: bpb 2.0826 bytes/chunk [4.49, 8.83] hnet/bpe [0.959, 1.884]
+  go: bpb 2.3645 bytes/chunk [3.11, 7.75] hnet/bpe [0.889, 2.214]
+  sql: bpb 4.4434 bytes/chunk [1.98, 3.82] hnet/bpe [0.738, 1.423]
+EVAL step 1200: val bpb 2.0695 ratios [3.73, 2.14] flops/byte fwd 20.04M
+  edu: bpb 2.0695 bytes/chunk [3.73, 7.97] hnet/bpe [0.796, 1.702]
+  go: bpb 2.3040 bytes/chunk [2.8, 5.66] hnet/bpe [0.799, 1.619]
+  sql: bpb 4.3507 bytes/chunk [1.91, 3.12] hnet/bpe [0.712, 1.163]
+EVAL step 1300: val bpb 2.0484 ratios [4.18, 2.05] flops/byte fwd 19.01M
+  edu: bpb 2.0484 bytes/chunk [4.18, 8.6] hnet/bpe [0.894, 1.835]
+  go: bpb 2.3289 bytes/chunk [3.25, 6.65] hnet/bpe [0.927, 1.9]
+  sql: bpb 4.4049 bytes/chunk [2.06, 3.71] hnet/bpe [0.768, 1.381]
+EVAL step 1400: val bpb 2.0352 ratios [4.24, 1.95] flops/byte fwd 19.20M
+  edu: bpb 2.0352 bytes/chunk [4.24, 8.29] hnet/bpe [0.906, 1.771]
+  go: bpb 2.3019 bytes/chunk [3.05, 5.65] hnet/bpe [0.872, 1.614]
+  sql: bpb 4.2882 bytes/chunk [1.98, 3.53] hnet/bpe [0.738, 1.314]
+EVAL step 1500: val bpb 2.0125 ratios [4.35, 2.05] flops/byte fwd 18.61M
+  edu: bpb 2.0125 bytes/chunk [4.35, 8.92] hnet/bpe [0.928, 1.904]
+  go: bpb 2.2419 bytes/chunk [3.19, 7.31] hnet/bpe [0.913, 2.089]
+  sql: bpb 4.1912 bytes/chunk [2.03, 3.48] hnet/bpe [0.758, 1.295]
+EVAL step 1600: val bpb 1.9890 ratios [4.02, 1.87] flops/byte fwd 20.19M
+  edu: bpb 1.9890 bytes/chunk [4.02, 7.49] hnet/bpe [0.858, 1.6]
+  go: bpb 2.0878 bytes/chunk [3.04, 6.16] hnet/bpe [0.868, 1.762]
+  sql: bpb 4.0263 bytes/chunk [1.84, 3.11] hnet/bpe [0.686, 1.159]
+EVAL step 1700: val bpb 1.9312 ratios [4.34, 2.02] flops/byte fwd 18.73M
+  edu: bpb 1.9312 bytes/chunk [4.34, 8.76] hnet/bpe [0.927, 1.871]
+  go: bpb 1.8525 bytes/chunk [3.25, 6.44] hnet/bpe [0.928, 1.839]
+  sql: bpb 3.7239 bytes/chunk [2.05, 3.86] hnet/bpe [0.765, 1.439]
+EVAL step 1800: val bpb 1.8806 ratios [4.07, 2.17] flops/byte fwd 18.92M
+  edu: bpb 1.8806 bytes/chunk [4.07, 8.85] hnet/bpe [0.869, 1.89]
+  go: bpb 1.6767 bytes/chunk [3.05, 5.53] hnet/bpe [0.871, 1.58]
+  sql: bpb 3.4655 bytes/chunk [1.98, 3.88] hnet/bpe [0.737, 1.444]
+EVAL step 1900: val bpb 1.8413 ratios [4.07, 2.03] flops/byte fwd 19.41M
+  edu: bpb 1.8413 bytes/chunk [4.07, 8.25] hnet/bpe [0.869, 1.761]
+  go: bpb 1.6091 bytes/chunk [3.27, 7.51] hnet/bpe [0.934, 2.146]
+  sql: bpb 3.2955 bytes/chunk [1.99, 4.27] hnet/bpe [0.743, 1.593]
+EVAL step 2000: val bpb 1.8197 ratios [3.9, 2.02] flops/byte fwd 19.93M
+  edu: bpb 1.8197 bytes/chunk [3.9, 7.88] hnet/bpe [0.832, 1.683]
+  go: bpb 1.5637 bytes/chunk [3.18, 6.46] hnet/bpe [0.908, 1.847]
+  sql: bpb 3.2278 bytes/chunk [1.99, 3.74] hnet/bpe [0.742, 1.392]

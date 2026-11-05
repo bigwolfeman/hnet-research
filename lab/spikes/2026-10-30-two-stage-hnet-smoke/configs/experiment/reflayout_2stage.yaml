@@ -1,0 +1,37 @@
+# @package _global_
+# The reference H-Net's 2-stage configuration (ref_hnet_2stage.yaml) built in OUR model code (model.kind hnet):
+#   layout  m4 | T1m4 | T10 | m4T1 | m4  (t/T attention, m Mamba-2; hnet/blocks.py parse_layout)
+#   widths  256 | 256 | 512 ; heads 4 | 4 | 8 (head_dim 64) ; SwiGLU 768 at d 256, 1408 at d 512
+#           (mlp_ratio 2.75 rounded up to a multiple of 128 = the reference d_intermediate [0, 768, 1408])
+#   windows 1024 keys (the reference's window_size 1023 = keys i-1023..i) ; main global
+#   targets 3 x 3, ratio-loss weight 0.03 ; LR 6.25e-4 x [3.03, 1.75, 0.72] (paper Eq. 11) ; RatioController on
+# Differences that stay: our module code (fused fp32 residual adds in the reference's norms; interleaved vs half
+# RoPE pairs, a fixed permutation). rope_dim 32 and the reference init rule since 2026-11-02 (commit after f4f49b7);
+# the runs of lab/experiments/refuted/2026-11-02-reference-layout-in-our-code.md had full RoPE and the old init.
+# Experiment: lab/experiments/refuted/2026-11-02-reference-layout-in-our-code.md
+experiment:
+  name: reflayout_2stage
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 1.75, 0.72]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 256, 512]
+  mlp_ratio: 2.75
+  mlp_multiple_of: 128
+  rope_dim: 32               # the reference rotary_emb_dim (32 of 64 head dims)
+  main:
+    layers: 10
+  stages:
+    - enc_layers: 4
+      dec_layers: 4
+      enc_layout: m4
+      dec_layout: m4
+      window: 1024
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 5
+      dec_layers: 5
+      enc_layout: T1m4
+      dec_layout: m4T1
+      window: 1024
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}

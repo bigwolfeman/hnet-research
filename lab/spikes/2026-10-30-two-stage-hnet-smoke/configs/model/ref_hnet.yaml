@@ -1,0 +1,14 @@
+# Reference H-Net architecture (goombalab/hnet @ 3673fe1) run through our trainer: hnet/refmodel.py.
+# Needs the reference environment: lab/spikes/2026-11-01-reference-hnet-probe/README.md (run train.py with that venv).
+kind: ref_hnet
+vocab_size: 256
+chunk_multiple: 8          # only pads probe rows; the reference code takes any length (mask mode)
+init_std: 0.02             # reference init_weights(initializer_range)
+d_model: [256, 256, 512]   # reference widths are d0 = d1, d2 = 1.5 d0; set per experiment
+stages: []                 # [{router: {target_ratio, loss_weight}}] per stage; set by experiment/*.yaml
+ref:
+  arch_layout: []          # e.g. ["m4", ["T1m4", ["T10"], "m4T1"], "m4"]; set by experiment/*.yaml
+  d_intermediate: []       # SwiGLU width per level (0 = no MLP), rounded up to 128 by the reference
+  ssm_cfg: {chunk_size: 256, d_conv: 4, d_state: 128, expand: 2}
+  attn_cfg: {num_heads: [], rotary_emb_dim: [], window_size: []}
+  tie_embeddings: false

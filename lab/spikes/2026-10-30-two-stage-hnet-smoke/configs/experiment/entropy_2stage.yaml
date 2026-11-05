@@ -1,0 +1,31 @@
+# @package _global_
+# The blog's BLT-like control (Cartesia Part II, Table 2): reflayout_2stage with frozen boundaries from a proxy byte
+# LM's next-byte entropy (hnet/boundaries.py) in place of the learned routers. Same layout, widths, ratios (3 x 3,
+# set by the thresholds), LR. No router parameters, no ratio loss, no RatioController.
+# Set model.boundaries.proxy and model.boundaries.thresholds (scripts/calibrate_entropy.py) on the command line.
+# Experiment: lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md
+defaults:
+  - reflayout_2stage
+  - _self_
+experiment:
+  name: entropy_2stage
+train:
+  ratio_integral_lr: 0.0
+model:
+  boundaries:
+    kind: entropy
+    proxy: ???
+    thresholds: ???
+  stages:
+    - enc_layers: 4
+      dec_layers: 4
+      enc_layout: m4
+      dec_layout: m4
+      window: 1024
+      router: {name: given, target_ratio: 3.0, loss_weight: 0.0, kwargs: {}}
+    - enc_layers: 5
+      dec_layers: 5
+      enc_layout: T1m4
+      dec_layout: m4T1
+      window: 1024
+      router: {name: given, target_ratio: 3.0, loss_weight: 0.0, kwargs: {}}

@@ -1,0 +1,22 @@
+# @package _global_
+# Blog split 2-stage H-Net: Cartesia's compute layout ("Where are the FLOPs spent?") at our scale.
+# Ratios held at 4 x 2 = 8 bytes per main position by the RatioController (blog: target 8, trained ~7.6).
+# Fwd FLOPs/byte at 4 x 2: 22.44M = BPE control 22.27M +0.8% (blog: within 2%).
+# Split stage0 / stage1 / main = 39% / 10% / 50% (blog: 31% / 12% / 57%). 49.4M params.
+# Experiment: lab/experiments/refuted/2026-11-01-compute-ladder-vs-bpe.md
+experiment:
+  name: blog_split_2stage
+train:
+  ratio_integral_lr: 0.002     # calibrated 2026-11-01 (note: .agents/notes/implemented/feature/2026-10-31-ratio-controller.md)
+model:
+  main:
+    layers: 13
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 1
+      dec_layers: 1
+      window: 256
+      router: {name: lookahead, target_ratio: 2.0, loss_weight: 0.03, kwargs: {}}

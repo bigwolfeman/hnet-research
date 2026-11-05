@@ -1,0 +1,186 @@
+coarse-jepa-on-dead-seeds-detach reflayout_2stage_s1 i581xzb1 finished 241
+      0-  199 sigreg   9.167 inv 0.1236 top1 0.086 same +0.461 other +0.336
+    200-  399 sigreg   5.317 inv 0.2773 top1 0.055 same +0.172 other +0.064
+    400-  599 sigreg   6.326 inv 0.2781 top1 0.008 same +0.078 other +0.119
+    600-  799 sigreg  13.132 inv 0.4865 top1 0.031 same +0.282 other +0.303
+    800-  999 sigreg  12.164 inv 0.1121 top1 0.047 same +0.467 other +0.433
+   1000- 1199 sigreg  12.897 inv 0.0336 top1 0.023 same +0.828 other +0.829
+   1200- 1399 sigreg  12.266 inv 0.0896 top1 0.023 same +0.490 other +0.475
+   1400- 1599 sigreg  13.095 inv 0.0000 top1 0.039 same +0.993 other +0.994
+   1600- 1799 sigreg   7.898 inv 0.2210 top1 0.031 same +0.283 other +0.242
+   1800- 1999 sigreg   7.537 inv 0.2913 top1 0.031 same +0.243 other +0.143
+   2000- 2199 sigreg  12.161 inv 0.2238 top1 0.039 same +0.309 other +0.237
+   2200- 2399 sigreg   6.989 inv 0.2265 top1 0.016 same +0.076 other +0.049
+   2400- 2599 sigreg   8.743 inv 0.1929 top1 0.039 same +0.234 other +0.226
+   2600- 2799 sigreg   6.760 inv 0.2916 top1 0.023 same +0.033 other +0.033
+   2800- 2999 sigreg   7.192 inv 0.1915 top1 0.039 same -0.061 other -0.089
+   3000- 3199 sigreg   8.361 inv 0.2004 top1 0.031 same +0.162 other +0.181
+   3200- 3399 sigreg   7.417 inv 0.2813 top1 0.023 same +0.131 other +0.088
+   3400- 3599 sigreg   4.817 inv 0.2797 top1 0.055 same -0.037 other +0.013
+   3600- 3799 sigreg   6.035 inv 0.3460 top1 0.070 same +0.091 other +0.038
+   3800- 3999 sigreg   5.225 inv 0.2955 top1 0.031 same -0.002 other +0.002
+   4000- 4199 sigreg  10.923 inv 0.3269 top1 0.039 same +0.187 other +0.120
+   4200- 4399 sigreg   5.547 inv 0.2797 top1 0.031 same -0.042 other +0.007
+   4400- 4599 sigreg   5.335 inv 0.2575 top1 0.062 same +0.085 other +0.035
+   4600- 4799 sigreg   4.864 inv 0.2815 top1 0.023 same +0.054 other +0.033
+   4800- 4999 sigreg   5.482 inv 0.2556 top1 0.031 same +0.022 other +0.026
+   5000- 5199 sigreg   5.758 inv 0.2662 top1 0.039 same +0.025 other +0.043
+   5200- 5399 sigreg   5.184 inv 0.2994 top1 0.023 same +0.124 other +0.042
+   5400- 5599 sigreg   4.187 inv 0.2987 top1 0.039 same -0.042 other +0.020
+   5600- 5799 sigreg   5.083 inv 0.3222 top1 0.023 same +0.115 other -0.003
+   5800- 5999 sigreg   4.128 inv 0.2977 top1 0.016 same +0.023 other +0.029
+   6000- 6199 sigreg   3.736 inv 0.3309 top1 0.031 same -0.014 other +0.021
+   6200- 6399 sigreg   3.591 inv 0.3038 top1 0.023 same +0.015 other -0.000
+   6400- 6599 sigreg   4.567 inv 0.2754 top1 0.039 same +0.036 other +0.024
+   6600- 6799 sigreg   4.372 inv 0.2553 top1 0.023 same +0.076 other +0.042
+   6800- 6999 sigreg   4.280 inv 0.2945 top1 0.016 same -0.032 other -0.006
+   7000- 7199 sigreg   3.962 inv 0.2923 top1 0.047 same +0.013 other +0.007
+   7200- 7399 sigreg   4.067 inv 0.3497 top1 0.016 same +0.033 other +0.015
+   7400- 7599 sigreg   5.684 inv 0.3224 top1 0.031 same -0.005 other +0.014
+   7600- 7799 sigreg  10.251 inv 0.4332 top1 0.055 same +0.078 other +0.046
+   7800- 7999 sigreg  13.050 inv 0.2595 top1 0.023 same +0.038 other +0.041
+   8000- 8199 sigreg  11.920 inv 0.0744 top1 0.031 same -0.100 other -0.103
+   8200- 8399 sigreg   9.067 inv 0.1747 top1 0.023 same +0.034 other +0.065
+   8400- 8599 sigreg   8.375 inv 0.1964 top1 0.023 same +0.089 other +0.101
+   8600- 8799 sigreg   5.077 inv 0.2830 top1 0.055 same +0.040 other +0.046
+   8800- 8999 sigreg   6.512 inv 0.2714 top1 0.031 same +0.199 other +0.200
+   9000- 9199 sigreg   7.391 inv 0.1940 top1 0.055 same +0.157 other +0.139
+   9200- 9399 sigreg   8.329 inv 0.2207 top1 0.039 same +0.307 other +0.297
+   9400- 9599 sigreg   9.481 inv 0.2591 top1 0.055 same +0.274 other +0.257
+   9600- 9799 sigreg   9.994 inv 0.1647 top1 0.023 same +0.426 other +0.398
+   9800- 9999 sigreg   6.219 inv 0.2540 top1 0.039 same +0.133 other +0.147
+  10000-10199 sigreg  11.428 inv 0.1485 top1 0.031 same +0.046 other +0.044
+  10200-10399 sigreg   9.009 inv 0.1431 top1 0.031 same +0.040 other +0.054
+  10400-10599 sigreg  10.071 inv 0.1740 top1 0.031 same +0.113 other +0.132
+  10600-10799 sigreg  11.283 inv 0.0984 top1 0.031 same +0.145 other +0.197
+  10800-10999 sigreg   8.097 inv 0.2230 top1 0.023 same +0.265 other +0.251
+  11000-11199 sigreg   9.543 inv 0.1194 top1 0.031 same +0.531 other +0.506
+  11200-11399 sigreg   9.338 inv 0.2035 top1 0.023 same +0.246 other +0.240
+  11400-11599 sigreg   8.718 inv 0.2104 top1 0.047 same +0.311 other +0.330
+  11600-11799 sigreg   9.273 inv 0.3811 top1 0.039 same +0.090 other +0.080
+  11800-11999 sigreg   5.548 inv 0.3056 top1 0.031 same -0.034 other -0.017
+  12000-12199 sigreg   5.326 inv 0.2689 top1 0.031 same +0.021 other -0.034
+coarse-jepa-on-dead-seeds-detach reflayout_2stage_s3 xdktm0nr finished 241
+      0-  199 sigreg   8.295 inv 0.1546 top1 0.078 same +0.309 other +0.208
+    200-  399 sigreg   5.863 inv 0.2537 top1 0.086 same +0.210 other +0.117
+    400-  599 sigreg   9.293 inv 0.1676 top1 0.023 same +0.109 other +0.113
+    600-  799 sigreg  12.855 inv 0.2109 top1 0.039 same +0.400 other +0.381
+    800-  999 sigreg  13.116 inv 0.0000 top1 0.039 same +1.000 other +1.000
+   1000- 1199 sigreg  22.060 inv 0.0071 top1 0.039 same +0.990 other +0.990
+   1200- 1399 sigreg  13.130 inv 0.0000 top1 0.023 same +1.000 other +1.000
+   1400- 1599 sigreg  11.089 inv 0.0596 top1 0.047 same +0.605 other +0.551
+   1600- 1799 sigreg   7.840 inv 0.1908 top1 0.031 same +0.186 other +0.154
+   1800- 1999 sigreg  11.919 inv 0.2004 top1 0.016 same +0.323 other +0.398
+   2000- 2199 sigreg   8.356 inv 0.1850 top1 0.047 same +0.206 other +0.195
+   2200- 2399 sigreg   7.586 inv 0.1969 top1 0.062 same +0.158 other +0.131
+   2400- 2599 sigreg   9.610 inv 0.1348 top1 0.039 same +0.266 other +0.329
+   2600- 2799 sigreg   9.995 inv 0.1257 top1 0.023 same +0.542 other +0.544
+   2800- 2999 sigreg  12.714 inv 0.0156 top1 0.047 same +0.971 other +0.972
+   3000- 3199 sigreg  13.026 inv 0.0068 top1 0.016 same +0.979 other +0.979
+   3200- 3399 sigreg  12.980 inv 0.0966 top1 0.023 same +0.437 other +0.472
+   3400- 3599 sigreg  12.670 inv 0.0332 top1 0.023 same +0.781 other +0.786
+   3600- 3799 sigreg   8.333 inv 0.1518 top1 0.039 same +0.314 other +0.270
+   3800- 3999 sigreg  11.251 inv 0.2173 top1 0.008 same +0.168 other +0.216
+   4000- 4199 sigreg  11.897 inv 0.1264 top1 0.039 same +0.419 other +0.456
+   4200- 4399 sigreg  13.358 inv 0.0003 top1 0.008 same +0.977 other +0.978
+   4400- 4599 sigreg   8.205 inv 0.1534 top1 0.031 same +0.325 other +0.283
+   4600- 4799 sigreg   9.047 inv 0.1338 top1 0.047 same +0.250 other +0.152
+   4800- 4999 sigreg   6.932 inv 0.2469 top1 0.031 same +0.082 other +0.060
+   5000- 5199 sigreg  12.492 inv 0.0492 top1 0.031 same +0.282 other +0.276
+   5200- 5399 sigreg  12.097 inv 0.0700 top1 0.016 same +0.289 other +0.325
+   5400- 5599 sigreg  12.569 inv 0.1370 top1 0.039 same +0.551 other +0.569
+   5600- 5799 sigreg  15.867 inv 0.0030 top1 0.031 same +0.979 other +0.981
+   5800- 5999 sigreg  11.549 inv 0.2369 top1 0.031 same +0.303 other +0.292
+   6000- 6199 sigreg   7.085 inv 0.2108 top1 0.023 same +0.340 other +0.282
+   6200- 6399 sigreg   8.609 inv 0.1652 top1 0.055 same +0.342 other +0.272
+   6400- 6599 sigreg   7.777 inv 0.2987 top1 0.023 same +0.188 other +0.164
+   6600- 6799 sigreg   6.750 inv 0.3001 top1 0.039 same +0.140 other +0.098
+   6800- 6999 sigreg   8.193 inv 0.2105 top1 0.039 same +0.268 other +0.153
+   7000- 7199 sigreg  10.586 inv 0.1247 top1 0.016 same +0.404 other +0.401
+   7200- 7399 sigreg   6.867 inv 0.2586 top1 0.000 same +0.054 other +0.051
+   7400- 7599 sigreg   4.519 inv 0.3293 top1 0.023 same -0.041 other +0.050
+   7600- 7799 sigreg   7.350 inv 0.2309 top1 0.047 same -0.001 other -0.009
+   7800- 7999 sigreg   5.489 inv 0.3328 top1 0.070 same +0.128 other +0.062
+   8000- 8199 sigreg   5.283 inv 0.3056 top1 0.031 same +0.088 other +0.034
+   8200- 8399 sigreg   4.578 inv 0.3059 top1 0.016 same +0.025 other +0.038
+   8400- 8599 sigreg   5.290 inv 0.3269 top1 0.008 same +0.027 other +0.014
+   8600- 8799 sigreg   3.794 inv 0.3137 top1 0.047 same +0.023 other +0.016
+   8800- 8999 sigreg   3.973 inv 0.2818 top1 0.031 same +0.066 other +0.026
+   9000- 9199 sigreg   6.332 inv 0.2525 top1 0.039 same +0.120 other +0.108
+   9200- 9399 sigreg   9.964 inv 0.2954 top1 0.016 same +0.145 other +0.195
+   9400- 9599 sigreg   9.248 inv 0.2233 top1 0.016 same +0.084 other +0.146
+   9600- 9799 sigreg   8.055 inv 0.1780 top1 0.055 same +0.042 other -0.006
+   9800- 9999 sigreg   7.265 inv 0.2076 top1 0.031 same +0.023 other -0.001
+  10000-10199 sigreg   7.195 inv 0.1529 top1 0.031 same +0.168 other +0.081
+  10200-10399 sigreg   7.225 inv 0.2751 top1 0.031 same +0.015 other -0.039
+  10400-10599 sigreg   6.039 inv 0.2285 top1 0.016 same -0.021 other -0.005
+  10600-10799 sigreg   4.960 inv 0.2690 top1 0.023 same +0.054 other +0.010
+  10800-10999 sigreg   4.684 inv 0.2717 top1 0.016 same +0.016 other +0.005
+  11000-11199 sigreg   8.109 inv 0.2100 top1 0.008 same +0.059 other +0.098
+  11200-11399 sigreg   7.989 inv 0.2225 top1 0.023 same +0.151 other +0.110
+  11400-11599 sigreg   7.587 inv 0.2511 top1 0.031 same +0.141 other +0.121
+  11600-11799 sigreg   4.278 inv 0.3460 top1 0.023 same -0.100 other -0.010
+  11800-11999 sigreg   4.427 inv 0.3017 top1 0.047 same -0.047 other -0.014
+  12000-12199 sigreg   3.449 inv 0.2842 top1 0.094 same +0.037 other -0.013
+coarse-jepa-on-dead-seeds-detach reflayout_2stage_s4 191clzls finished 241
+      0-  199 sigreg   7.302 inv 0.1659 top1 0.078 same +0.293 other +0.220
+    200-  399 sigreg   4.062 inv 0.3162 top1 0.031 same +0.086 other +0.051
+    400-  599 sigreg   3.905 inv 0.3149 top1 0.055 same +0.116 other +0.049
+    600-  799 sigreg   6.766 inv 0.2839 top1 0.062 same +0.067 other +0.049
+    800-  999 sigreg   7.347 inv 0.2749 top1 0.031 same +0.113 other +0.137
+   1000- 1199 sigreg   6.360 inv 0.2878 top1 0.031 same +0.074 other +0.060
+   1200- 1399 sigreg   6.487 inv 0.3308 top1 0.023 same +0.058 other +0.043
+   1400- 1599 sigreg   4.315 inv 0.2766 top1 0.047 same +0.004 other +0.006
+   1600- 1799 sigreg   4.415 inv 0.3262 top1 0.055 same +0.051 other +0.035
+   1800- 1999 sigreg   3.408 inv 0.3235 top1 0.031 same +0.043 other +0.023
+   2000- 2199 sigreg   3.311 inv 0.3125 top1 0.039 same +0.015 other +0.010
+   2200- 2399 sigreg   2.854 inv 0.3614 top1 0.031 same -0.006 other +0.014
+   2400- 2599 sigreg   3.870 inv 0.3087 top1 0.008 same +0.021 other +0.033
+   2600- 2799 sigreg   3.312 inv 0.3319 top1 0.031 same -0.019 other +0.015
+   2800- 2999 sigreg   3.453 inv 0.3230 top1 0.039 same -0.003 other +0.019
+   3000- 3199 sigreg   4.148 inv 0.3448 top1 0.031 same -0.020 other +0.033
+   3200- 3399 sigreg   4.983 inv 0.3256 top1 0.008 same -0.002 other +0.071
+   3400- 3599 sigreg   5.046 inv 0.2494 top1 0.047 same +0.115 other +0.087
+   3600- 3799 sigreg   3.864 inv 0.2899 top1 0.047 same +0.023 other +0.027
+   3800- 3999 sigreg   3.510 inv 0.3179 top1 0.047 same +0.010 other +0.004
+   4000- 4199 sigreg   6.156 inv 0.2266 top1 0.016 same +0.234 other +0.233
+   4200- 4399 sigreg   5.093 inv 0.3245 top1 0.039 same -0.071 other -0.021
+   4400- 4599 sigreg   4.711 inv 0.3378 top1 0.039 same +0.030 other +0.039
+   4600- 4799 sigreg   5.570 inv 0.2830 top1 0.039 same +0.080 other +0.062
+   4800- 4999 sigreg   3.003 inv 0.3563 top1 0.016 same +0.051 other +0.017
+   5000- 5199 sigreg   5.700 inv 0.3482 top1 0.016 same +0.002 other +0.069
+   5200- 5399 sigreg   3.589 inv 0.3301 top1 0.023 same +0.006 other +0.007
+   5400- 5599 sigreg   4.124 inv 0.2916 top1 0.031 same +0.107 other +0.051
+   5600- 5799 sigreg   3.830 inv 0.3481 top1 0.031 same -0.001 other +0.013
+   5800- 5999 sigreg   3.930 inv 0.3058 top1 0.031 same -0.010 other -0.005
+   6000- 6199 sigreg   3.582 inv 0.3324 top1 0.023 same -0.005 other -0.017
+   6200- 6399 sigreg   4.237 inv 0.3126 top1 0.031 same -0.022 other +0.009
+   6400- 6599 sigreg   3.267 inv 0.3142 top1 0.031 same +0.034 other +0.020
+   6600- 6799 sigreg   3.254 inv 0.3603 top1 0.047 same -0.025 other -0.006
+   6800- 6999 sigreg   4.903 inv 0.3728 top1 0.023 same +0.021 other +0.041
+   7000- 7199 sigreg   3.355 inv 0.3206 top1 0.039 same -0.012 other +0.022
+   7200- 7399 sigreg   3.341 inv 0.3494 top1 0.023 same -0.020 other +0.016
+   7400- 7599 sigreg   4.677 inv 0.3548 top1 0.047 same +0.029 other +0.051
+   7600- 7799 sigreg   3.467 inv 0.3619 top1 0.023 same -0.012 other +0.022
+   7800- 7999 sigreg   3.864 inv 0.3733 top1 0.008 same -0.036 other +0.008
+   8000- 8199 sigreg   3.426 inv 0.3559 top1 0.016 same +0.023 other +0.017
+   8200- 8399 sigreg   3.542 inv 0.2968 top1 0.031 same +0.013 other +0.021
+   8400- 8599 sigreg   3.377 inv 0.3803 top1 0.008 same -0.045 other +0.007
+   8600- 8799 sigreg   3.424 inv 0.3777 top1 0.016 same -0.021 other +0.012
+   8800- 8999 sigreg   2.976 inv 0.3439 top1 0.039 same +0.038 other +0.009
+   9000- 9199 sigreg   2.849 inv 0.3396 top1 0.039 same -0.012 other -0.000
+   9200- 9399 sigreg   3.024 inv 0.3430 top1 0.023 same -0.020 other +0.005
+   9400- 9599 sigreg   2.652 inv 0.3214 top1 0.016 same +0.039 other +0.009
+   9600- 9799 sigreg   2.815 inv 0.3268 top1 0.023 same -0.013 other +0.003
+   9800- 9999 sigreg   4.955 inv 0.3679 top1 0.023 same -0.003 other +0.006
+  10000-10199 sigreg   4.181 inv 0.3755 top1 0.023 same -0.019 other +0.034
+  10200-10399 sigreg   4.353 inv 0.3009 top1 0.016 same -0.010 other -0.011
+  10400-10599 sigreg   3.905 inv 0.2942 top1 0.039 same -0.009 other +0.003
+  10600-10799 sigreg   3.659 inv 0.3311 top1 0.055 same +0.004 other -0.008
+  10800-10999 sigreg   3.036 inv 0.3561 top1 0.031 same +0.013 other +0.006
+  11000-11199 sigreg   3.678 inv 0.3071 top1 0.070 same +0.032 other -0.008
+  11200-11399 sigreg   3.336 inv 0.3051 top1 0.016 same -0.026 other -0.004
+  11400-11599 sigreg   3.051 inv 0.3400 top1 0.031 same +0.004 other +0.004
+  11600-11799 sigreg   2.950 inv 0.3064 top1 0.070 same +0.015 other +0.005
+  11800-11999 sigreg   2.594 inv 0.3152 top1 0.047 same +0.038 other +0.006
+  12000-12199 sigreg   2.039 inv 0.3308 top1 0.000 same +0.099 other -0.010

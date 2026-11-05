@@ -1,0 +1,25 @@
+# @package _global_
+# Windowed-attention 2-stage H-Net: loop1_1stage (stage 0 T2/T2 window 512 bytes, ratio 4, d 256; main T8 d 512)
+# with a stage 1 inserted above stage 0: T2/T2 window 512 chunks, ratio 2, d 256. No Mamba-2 anywhere, so no outer
+# path sees the whole row. Stage 0 and main have loop1_1stage's shapes, so train.grow_from=<loop1_1stage final.pt>
+# maps them in (hnet/grow.py; the new stage is stage 1).
+# Experiment: lab/experiments/refuted/2026-11-04-windowed-growth-keeps-main.md
+experiment:
+  name: windowed_2stage
+train:
+  lr_mult: [1.5, 1.2, 1.0]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 256, 512]
+  main:
+    layers: 8
+    loops: 1
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 2.0, loss_weight: 0.03, kwargs: {}}

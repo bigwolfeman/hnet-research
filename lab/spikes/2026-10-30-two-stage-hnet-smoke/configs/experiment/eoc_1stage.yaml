@@ -1,0 +1,12 @@
+# @package _global_
+experiment:
+  name: eoc_1stage
+train:
+  lr_mult: [1.5, 1.0]
+model:
+  d_model: [256, 512]
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: eoc, target_ratio: 4.0, loss_weight: 0.03, kwargs: {read_own_end: true, force_last: false}}

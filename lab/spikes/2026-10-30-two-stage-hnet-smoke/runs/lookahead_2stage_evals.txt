@@ -1,0 +1,8 @@
+EVAL step 250: val bpb 2.6752 ratios [2.73, 2.07] flops/byte fwd 25.30M
+EVAL step 500: val bpb 2.3666 ratios [2.76, 2.01] flops/byte fwd 25.46M
+EVAL step 750: val bpb 2.2583 ratios [2.81, 2.01] flops/byte fwd 25.15M
+EVAL step 1000: val bpb 2.2020 ratios [2.96, 2.06] flops/byte fwd 24.03M
+EVAL step 1250: val bpb 2.1555 ratios [3.02, 1.98] flops/byte fwd 24.08M
+EVAL step 1500: val bpb 2.1230 ratios [3.13, 2.04] flops/byte fwd 23.26M
+EVAL step 1750: val bpb 2.0576 ratios [3.13, 2.0] flops/byte fwd 23.42M
+EVAL step 2000: val bpb 1.9922 ratios [3.16, 2.01] flops/byte fwd 23.24M

@@ -1,0 +1,12 @@
+# @package _global_
+# Reference 2-stage H-Net with our LR: base 8e-4 x per-stage [1.5, 1.2, 1.0] (configs/train/ladder.yaml) in place of
+# the paper's 6.25e-4 x [3.03, 1.75, 0.72]. Per-stage LR: ours 1.2e-3 / 9.6e-4 / 8.0e-4, paper 1.89e-3 / 1.09e-3 / 4.5e-4.
+# Experiment: lab/experiments/refuted/2026-11-01-reference-hnet-difference-ablation.md
+defaults:
+  - ref_hnet_2stage
+  - _self_
+experiment:
+  name: ref_hnet_2stage_ourlr
+train:
+  lr: 8.0e-4
+  lr_mult: [1.5, 1.2, 1.0]

@@ -1,0 +1,398 @@
+{
+ "checkpoint": "ignored/runs/reference-layout-vs-bpe/reflayout_2stage_s1/ladder_48000.pt",
+ "gate_edu_bpb": 1.2252474380305693,
+ "cuts_per_byte_intact": [
+  0.32469940185546875,
+  0.11415481567382812
+ ],
+ "s0": {
+  "hidden_words": {
+   "join_rate": 0.4659322033898305,
+   "matched_control_rate": 0.2751509118949614,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.8273092369477911,
+     "n_join": 249,
+     "control_rate": 0.47124173815215864,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.9171428571428571,
+     "n_join": 1750,
+     "control_rate": 0.4880794701986755,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.7118260081558677,
+     "n_join": 2207,
+     "control_rate": 0.30360889634913973,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.40591567023285086,
+     "n_join": 1589,
+     "control_rate": 0.17980781887587205,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.41631504922644164,
+     "n_join": 1422,
+     "control_rate": 0.16764755338826298,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.3682140047206924,
+     "n_join": 1271,
+     "control_rate": 0.16810717372515124,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.35638297872340424,
+     "n_join": 1316,
+     "control_rate": 0.21486854034451497,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.34080547112462006,
+     "n_join": 7896,
+     "control_rate": 0.27964632454923716,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.5024194306116696,
+   "k0": 0.19026196166643236,
+   "k1": 0.4632125603864734,
+   "k2": 0.4712945590994371,
+   "k3+": 0.19934753939057404
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 1.8926493483529787,
+    "bits_nocut": 1.0084862492508473,
+    "n_cut": 19177,
+    "n_nocut": 22223
+   },
+   "k2": {
+    "bits_cut": 1.4321823100403959,
+    "bits_nocut": 0.7899807233734863,
+    "n_cut": 16328,
+    "n_nocut": 18317
+   },
+   "k3": {
+    "bits_cut": 0.965935628448131,
+    "bits_nocut": 0.6167729591446897,
+    "n_cut": 8225,
+    "n_nocut": 18677
+   },
+   "k4": {
+    "bits_cut": 1.281616186955728,
+    "bits_nocut": 0.3853681541284004,
+    "n_cut": 3063,
+    "n_nocut": 17864
+   }
+  }
+ },
+ "s1": {
+  "hidden_words": {
+   "join_rate": 0.10451977401129943,
+   "matched_control_rate": 0.13885576386054796,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.07630522088353414,
+     "n_join": 249,
+     "control_rate": 0.027211362677541838,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.2257142857142857,
+     "n_join": 1750,
+     "control_rate": 0.08410596026490066,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.27956502038966924,
+     "n_join": 2207,
+     "control_rate": 0.09651699538396978,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.09251101321585903,
+     "n_join": 1589,
+     "control_rate": 0.08424378043964723,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.0829817158931083,
+     "n_join": 1422,
+     "control_rate": 0.0951740373297461,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.07081038552321008,
+     "n_join": 1271,
+     "control_rate": 0.10587726879861711,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.053951367781155016,
+     "n_join": 1316,
+     "control_rate": 0.1387126019945603,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.04977203647416414,
+     "n_join": 7896,
+     "control_rate": 0.19053398058252427,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.31882457953584514,
+   "k0": 0.04646422044144524,
+   "k1": 0.03060386473429952,
+   "k2": 0.09998556790301631,
+   "k3+": 0.09556862239585916
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 2.2994083854652736,
+    "bits_nocut": 1.3902169298602682,
+    "n_cut": 1267,
+    "n_nocut": 40133
+   },
+   "k2": {
+    "bits_cut": 1.5004406271578126,
+    "bits_nocut": 1.0473436815976738,
+    "n_cut": 3464,
+    "n_nocut": 31181
+   },
+   "k3": {
+    "bits_cut": 1.0978481372338558,
+    "bits_nocut": 0.6823324992749558,
+    "n_cut": 2667,
+    "n_nocut": 24235
+   },
+   "k4": {
+    "bits_cut": 1.610852186985251,
+    "bits_nocut": 0.43863184346328093,
+    "n_cut": 1391,
+    "n_nocut": 19536
+   }
+  }
+ },
+ "stage1_units": {
+  "words_per_chunk": {
+   "0": 0.1931920274182278,
+   "1": 0.43223638239110906,
+   "2": 0.2271320666821948,
+   "3": 0.09433334442484943,
+   "4": 0.0320433900109806,
+   "5": 0.011679366452600405,
+   "6": 0.004924633148105015
+  },
+  "top_multiword": [
+   [
+    " of the ",
+    79
+   ],
+   [
+    " in the ",
+    35
+   ],
+   [
+    "United States",
+    18
+   ],
+   [
+    " at the ",
+    14
+   ],
+   [
+    " of thi",
+    13
+   ],
+   [
+    " to the ",
+    13
+   ],
+   [
+    " from the ",
+    11
+   ],
+   [
+    " on the ",
+    11
+   ],
+   [
+    " on a",
+    11
+   ],
+   [
+    " and the ",
+    10
+   ],
+   [
+    " in a",
+    9
+   ],
+   [
+    "d by the ",
+    9
+   ],
+   [
+    " with the ",
+    9
+   ],
+   [
+    " for the ",
+    9
+   ],
+   [
+    " with disabilities",
+    8
+   ],
+   [
+    ". The res",
+    7
+   ],
+   [
+    " that the ",
+    7
+   ],
+   [
+    " of the",
+    7
+   ],
+   [
+    ". If you",
+    7
+   ],
+   [
+    " in thi",
+    7
+   ],
+   [
+    ". This i",
+    7
+   ],
+   [
+    ". There ar",
+    7
+   ],
+   [
+    " of life",
+    7
+   ],
+   [
+    " and a",
+    7
+   ],
+   [
+    " of ne",
+    6
+   ],
+   [
+    ", and the ",
+    6
+   ],
+   [
+    " of po",
+    6
+   ],
+   [
+    "d in the ",
+    6
+   ],
+   [
+    " in an",
+    6
+   ],
+   [
+    " in so",
+    6
+   ],
+   [
+    " of Medicine",
+    6
+   ],
+   [
+    " of te",
+    6
+   ],
+   [
+    " of rel",
+    6
+   ],
+   [
+    " of carbon",
+    6
+   ],
+   [
+    " to he",
+    5
+   ],
+   [
+    " of thos",
+    5
+   ],
+   [
+    " in no",
+    5
+   ],
+   [
+    "n in the ",
+    5
+   ],
+   [
+    " at a",
+    5
+   ],
+   [
+    " and i",
+    5
+   ]
+  ]
+ },
+ "semantic": {
+  "sem/word_s0_auroc": 0.6698609823105218,
+  "sem/word_s0_n_pos": 42473,
+  "sem/word_s0_seen_frac": 1.0,
+  "sem/word_s1_auroc": 0.6813677329039134,
+  "sem/word_s1_n_pos": 25707,
+  "sem/word_s1_seen_frac": 0.36918591408136303,
+  "sem/hidden_s0_auroc": 0.7362773055072942,
+  "sem/hidden_s0_n_pos": 17774,
+  "sem/hidden_s0_seen_frac": 1.0,
+  "sem/hidden_s1_auroc": 0.4581770142879741,
+  "sem/hidden_s1_n_pos": 8199,
+  "sem/hidden_s1_seen_frac": 0.2692353101210917,
+  "sem/gotok_s0_auroc": 0.8895024812709345,
+  "sem/gotok_s0_n_pos": 9383,
+  "sem/gotok_s0_seen_frac": 1.0,
+  "sem/gotok_s1_auroc": 0.706464037003742,
+  "sem/gotok_s1_n_pos": 7821,
+  "sem/gotok_s1_seen_frac": 0.3535511528212258,
+  "sem/morph_s0_auroc": 0.4604004026071117,
+  "sem/morph_s0_n_pos": 4793,
+  "sem/morph_s0_seen_frac": 1.0,
+  "sem/morph_s1_auroc": 0.458275109332856,
+  "sem/morph_s1_n_pos": 463,
+  "sem/morph_s1_seen_frac": 0.21936838809825074,
+  "sem/phrase_s0_auroc": 0.5533963461454375,
+  "sem/phrase_s0_n_pos": 3634,
+  "sem/phrase_s0_seen_frac": 1.0,
+  "sem/phrase_s1_auroc": 0.5276991112529661,
+  "sem/phrase_s1_n_pos": 2617,
+  "sem/phrase_s1_seen_frac": 0.6228190371791358
+ },
+ "s1_cuts_on_s0_cuts": 1.0
+}

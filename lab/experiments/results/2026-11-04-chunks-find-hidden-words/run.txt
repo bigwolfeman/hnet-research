@@ -1,0 +1,13 @@
+reflayout_2stage_s0__ladder_12000: bpb 1.3184 cuts/byte [0.3301, 0.1119] s0 join 0.5177 vs control 0.2438 (joins 17700, dropped 0.000%)
+   word_s0 0.913  word_s1 0.703  hidden_s0 0.754  hidden_s1 0.455  gotok_s0 0.869  gotok_s1 0.712  morph_s0 0.488  morph_s1 0.569  phrase_s0 0.594  phrase_s1 0.566
+reflayout_2stage_s0__ladder_48000: bpb 1.1694 cuts/byte [0.3128, 0.1156] s0 join 0.5882 vs control 0.2242 (joins 17700, dropped 0.000%)
+   word_s0 0.931  word_s1 0.719  hidden_s0 0.780  hidden_s1 0.520  gotok_s0 0.966  gotok_s1 0.725  morph_s0 0.511  morph_s1 0.602  phrase_s0 0.421  phrase_s1 0.499
+reflayout_2stage_s0__final: bpb 1.0905 cuts/byte [0.3128, 0.1159] s0 join 0.7176 vs control 0.2274 (joins 17700, dropped 0.000%)
+   word_s0 0.942  word_s1 0.718  hidden_s0 0.805  hidden_s1 0.517  gotok_s0 0.943  gotok_s1 0.570  morph_s0 0.573  morph_s1 0.545  phrase_s0 0.395  phrase_s1 0.495
+reflayout_2stage_s1__ladder_12000: bpb 1.3587 cuts/byte [0.3249, 0.1092] s0 join 0.3633 vs control 0.2924 (joins 17700, dropped 0.000%)
+   word_s0 0.628  word_s1 0.695  hidden_s0 0.677  hidden_s1 0.496  gotok_s0 0.842  gotok_s1 0.443  morph_s0 0.431  morph_s1 0.487  phrase_s0 0.617  phrase_s1 0.605
+reflayout_2stage_s1__ladder_48000: bpb 1.2252 cuts/byte [0.3247, 0.1142] s0 join 0.4659 vs control 0.2752 (joins 17700, dropped 0.000%)
+   word_s0 0.670  word_s1 0.681  hidden_s0 0.736  hidden_s1 0.458  gotok_s0 0.890  gotok_s1 0.706  morph_s0 0.460  morph_s1 0.458  phrase_s0 0.553  phrase_s1 0.528
+reflayout_2stage_s1__final: bpb 1.0979 cuts/byte [0.3101, 0.1191] s0 join 0.6326 vs control 0.2708 (joins 17700, dropped 0.000%)
+   word_s0 0.670  word_s1 0.672  hidden_s0 0.747  hidden_s1 0.432  gotok_s0 0.849  gotok_s1 0.590  morph_s0 0.530  morph_s1 0.522  phrase_s0 0.532  phrase_s1 0.665
+wandb alignment curves written

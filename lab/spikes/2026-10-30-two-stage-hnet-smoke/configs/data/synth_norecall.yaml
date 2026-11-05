@@ -1,0 +1,9 @@
+# Synthetic norecall language (hnet/synth.py), built by scripts/make_synth.py. Anchors (oracle bpb) in synth/norecall/meta.json.
+defaults:
+  - bytes
+  - _self_
+train_sources:
+  - {name: synth, file: synth/norecall/train.bin, weight: 1.0}
+val_sets:
+  - {name: synth, file: synth/norecall/val.bin}
+primary_val: synth

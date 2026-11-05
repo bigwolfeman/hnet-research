@@ -1,0 +1,79 @@
+{
+ "files": {
+  "edu_train": {
+   "src": "~/data/hnet-bytes/fineweb-edu/train.bin",
+   "dst": "~/data/hnet-bytes/bpe32k/edu_train.u16",
+   "bytes": 12884902956,
+   "docs": 2674702,
+   "tokens": 2845738154,
+   "bytes_per_token": 4.527789367369883,
+   "role": "train",
+   "seconds": 1612.6332018375397
+  },
+  "go_train": {
+   "src": "~/data/hnet-bytes/code/go_train.bin",
+   "dst": "~/data/hnet-bytes/bpe32k/go_train.u16",
+   "bytes": 1610620344,
+   "docs": 316762,
+   "tokens": 575139454,
+   "bytes_per_token": 2.8003996818482912,
+   "role": "train",
+   "seconds": 265.3480818271637
+  },
+  "edu_val": {
+   "src": "~/data/hnet-bytes/fineweb-edu/val.bin",
+   "dst": "~/data/hnet-bytes/bpe32k/edu_val.u16",
+   "bytes": 67109859,
+   "docs": 13689,
+   "tokens": 14823257,
+   "bytes_per_token": 4.527335591631448,
+   "role": "val",
+   "seconds": 7.069287538528442
+  },
+  "go_val": {
+   "src": "~/data/hnet-bytes/code/go_val.bin",
+   "dst": "~/data/hnet-bytes/bpe32k/go_val.u16",
+   "bytes": 33568717,
+   "docs": 5117,
+   "tokens": 11588509,
+   "bytes_per_token": 2.896724418991261,
+   "role": "val",
+   "seconds": 6.081071853637695
+  },
+  "sql_val": {
+   "src": "~/data/hnet-bytes/code/sql_val.bin",
+   "dst": "~/data/hnet-bytes/bpe32k/sql_val.u16",
+   "bytes": 33855376,
+   "docs": 2712,
+   "tokens": 16301947,
+   "bytes_per_token": 2.076768866933502,
+   "role": "val",
+   "seconds": 6.901503801345825
+  }
+ },
+ "settings": {
+  "data_dir": "~/data/hnet-bytes",
+  "out_dir": "~/data/hnet-bytes/bpe32k",
+  "vocab_size": 32768,
+  "sample_bytes": 1000000000,
+  "segments": 64,
+  "min_frequency": 2,
+  "docs_per_batch": 8192,
+  "only": null
+ },
+ "eos_id": 0,
+ "eos_token": "<|endoftext|>",
+ "vocab_size": 32768,
+ "dtype": "uint16",
+ "tokenizers": "0.23.3",
+ "pretokenizer": "ByteLevel(add_prefix_space=False, use_regex=True) (GPT-2 regex)",
+ "tokenizer_mix_by_bytes": {
+  "edu_train": 0.9,
+  "go_train": 0.1
+ },
+ "timing": {
+  "train_tokenizer_s": 79.09155297279358,
+  "total_s": 1977.160718202591
+ },
+ "note": "bytes_per_token = file bytes / tokens; the EOS token stands for the one 0 separator byte per doc"
+}

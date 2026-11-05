@@ -1,0 +1,13 @@
+# @package _global_
+experiment:
+  name: lookahead_2stage
+model:
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 2
+      dec_layers: 2
+      window: 256
+      router: {name: lookahead, target_ratio: 2.0, loss_weight: 0.03, kwargs: {}}

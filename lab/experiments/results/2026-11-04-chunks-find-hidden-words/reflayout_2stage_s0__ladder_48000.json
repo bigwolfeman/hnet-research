@@ -1,0 +1,398 @@
+{
+ "checkpoint": "ignored/runs/reference-layout-vs-bpe/reflayout_2stage_s0/ladder_48000.pt",
+ "gate_edu_bpb": 1.1694311136279856,
+ "cuts_per_byte_intact": [
+  0.3128204345703125,
+  0.1155548095703125
+ ],
+ "s0": {
+  "hidden_words": {
+   "join_rate": 0.5881920903954803,
+   "matched_control_rate": 0.22417288599580965,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.606425702811245,
+     "n_join": 249,
+     "control_rate": 0.21783152861763466,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.7925714285714286,
+     "n_join": 1750,
+     "control_rate": 0.4461920529801324,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.7163570457634798,
+     "n_join": 2207,
+     "control_rate": 0.2146454049517415,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.5915670232850849,
+     "n_join": 1589,
+     "control_rate": 0.15519283927866262,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.5316455696202531,
+     "n_join": 1422,
+     "control_rate": 0.13906171178745586,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.4964594807238395,
+     "n_join": 1271,
+     "control_rate": 0.14347450302506481,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.5075987841945289,
+     "n_join": 1316,
+     "control_rate": 0.17437292233303112,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.5441995947315096,
+     "n_join": 7896,
+     "control_rate": 0.22832871012482664,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.8730855961664944,
+   "k0": 0.18431041754533953,
+   "k1": 0.2033574879227053,
+   "k2": 0.4218790590272767,
+   "k3+": 0.13816696248847288
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 2.1402675200698944,
+    "bits_nocut": 1.1404392185307866,
+    "n_cut": 8419,
+    "n_nocut": 32981
+   },
+   "k2": {
+    "bits_cut": 1.5632130721769832,
+    "bits_nocut": 0.6379850477463295,
+    "n_cut": 14616,
+    "n_nocut": 20029
+   },
+   "k3": {
+    "bits_cut": 1.402821343871918,
+    "bits_nocut": 0.5031336824508277,
+    "n_cut": 5202,
+    "n_nocut": 21700
+   },
+   "k4": {
+    "bits_cut": 1.7779826476025022,
+    "bits_nocut": 0.31461649672431585,
+    "n_cut": 2461,
+    "n_nocut": 18466
+   }
+  }
+ },
+ "s1": {
+  "hidden_words": {
+   "join_rate": 0.07502824858757062,
+   "matched_control_rate": 0.1130515902730021,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.012048192771084338,
+     "n_join": 249,
+     "control_rate": 0.0346646041344396,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.10285714285714286,
+     "n_join": 1750,
+     "control_rate": 0.03352649006622516,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.06841866787494336,
+     "n_join": 2207,
+     "control_rate": 0.03713806126731011,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.048458149779735685,
+     "n_join": 1589,
+     "control_rate": 0.07187047518757404,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.08157524613220815,
+     "n_join": 1422,
+     "control_rate": 0.08037666050109299,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.08025177025963807,
+     "n_join": 1271,
+     "control_rate": 0.09226447709593777,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.07750759878419453,
+     "n_join": 1316,
+     "control_rate": 0.123904502870958,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.07560790273556231,
+     "n_join": 7896,
+     "control_rate": 0.17007628294036062,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.5094663158883773,
+   "k0": 0.02305637565021791,
+   "k1": 0.03323671497584541,
+   "k2": 0.016539183143310723,
+   "k3+": 0.056222669535642394
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 1.022153760332701,
+    "bits_nocut": 1.354818472506859,
+    "n_cut": 1376,
+    "n_nocut": 40024
+   },
+   "k2": {
+    "bits_cut": 1.8947984450947513,
+    "bits_nocut": 1.0137475133602587,
+    "n_cut": 573,
+    "n_nocut": 34072
+   },
+   "k3": {
+    "bits_cut": 1.4478822131565938,
+    "bits_nocut": 0.6530246305164279,
+    "n_cut": 815,
+    "n_nocut": 26087
+   },
+   "k4": {
+    "bits_cut": 2.2611767542584778,
+    "bits_nocut": 0.40714897393463784,
+    "n_cut": 898,
+    "n_nocut": 20029
+   }
+  }
+ },
+ "stage1_units": {
+  "words_per_chunk": {
+   "0": 0.07781065088757397,
+   "1": 0.5928007889546351,
+   "2": 0.21074950690335306,
+   "3": 0.09145299145299145,
+   "4": 0.022485207100591716,
+   "5": 0.0039119000657462195,
+   "6": 0.0007232084155161078
+  },
+  "top_multiword": [
+   [
+    " well as",
+    22
+   ],
+   [
+    " the first",
+    21
+   ],
+   [
+    " they are",
+    16
+   ],
+   [
+    " it is",
+    15
+   ],
+   [
+    " to be",
+    13
+   ],
+   [
+    " it was",
+    11
+   ],
+   [
+    " the other",
+    10
+   ],
+   [
+    " the last",
+    10
+   ],
+   [
+    " children wit",
+    10
+   ],
+   [
+    " the fact",
+    9
+   ],
+   [
+    " the world",
+    9
+   ],
+   [
+    " the University of",
+    8
+   ],
+   [
+    " the most",
+    8
+   ],
+   [
+    " the time",
+    8
+   ],
+   [
+    " more tha",
+    8
+   ],
+   [
+    " it t",
+    8
+   ],
+   [
+    " them t",
+    7
+   ],
+   [
+    " the \ufffd",
+    7
+   ],
+   [
+    " the past",
+    7
+   ],
+   [
+    "/ 5 ",
+    7
+   ],
+   [
+    " of the most",
+    6
+   ],
+   [
+    " the following",
+    6
+   ],
+   [
+    " it as",
+    6
+   ],
+   [
+    " the United States",
+    6
+   ],
+   [
+    " not be",
+    6
+   ],
+   [
+    " the body",
+    6
+   ],
+   [
+    " part of",
+    6
+   ],
+   [
+    " the back of",
+    6
+   ],
+   [
+    " the age",
+    6
+   ],
+   [
+    " teacher reports of",
+    6
+   ],
+   [
+    " it has",
+    5
+   ],
+   [
+    " the use of",
+    5
+   ],
+   [
+    " the same time",
+    5
+   ],
+   [
+    " the second",
+    5
+   ],
+   [
+    " you want",
+    5
+   ],
+   [
+    " the amount of",
+    5
+   ],
+   [
+    " a good",
+    5
+   ],
+   [
+    ". The first",
+    5
+   ],
+   [
+    " the U.S. ",
+    5
+   ],
+   [
+    " Alzheimer's disease",
+    5
+   ]
+  ]
+ },
+ "semantic": {
+  "sem/word_s0_auroc": 0.9313683230262197,
+  "sem/word_s0_n_pos": 42473,
+  "sem/word_s0_seen_frac": 1.0,
+  "sem/word_s1_auroc": 0.7189869575323351,
+  "sem/word_s1_n_pos": 39168,
+  "sem/word_s1_seen_frac": 0.3436426586488087,
+  "sem/hidden_s0_auroc": 0.7803629582013533,
+  "sem/hidden_s0_n_pos": 17774,
+  "sem/hidden_s0_seen_frac": 1.0,
+  "sem/hidden_s1_auroc": 0.5198490814741008,
+  "sem/hidden_s1_n_pos": 10332,
+  "sem/hidden_s1_seen_frac": 0.228832047471652,
+  "sem/gotok_s0_auroc": 0.9664809436607906,
+  "sem/gotok_s0_n_pos": 9383,
+  "sem/gotok_s0_seen_frac": 1.0,
+  "sem/gotok_s1_auroc": 0.724871125419921,
+  "sem/gotok_s1_n_pos": 9101,
+  "sem/gotok_s1_seen_frac": 0.39964469161549454,
+  "sem/morph_s0_auroc": 0.510861761879342,
+  "sem/morph_s0_n_pos": 4793,
+  "sem/morph_s0_seen_frac": 1.0,
+  "sem/morph_s1_auroc": 0.6018689481798223,
+  "sem/morph_s1_n_pos": 512,
+  "sem/morph_s1_seen_frac": 0.12118287003822022,
+  "sem/phrase_s0_auroc": 0.42071894796707426,
+  "sem/phrase_s0_n_pos": 3634,
+  "sem/phrase_s0_seen_frac": 1.0,
+  "sem/phrase_s1_auroc": 0.49869384468336386,
+  "sem/phrase_s1_n_pos": 3508,
+  "sem/phrase_s1_seen_frac": 0.9337718096282086
+ },
+ "s1_cuts_on_s0_cuts": 1.0
+}

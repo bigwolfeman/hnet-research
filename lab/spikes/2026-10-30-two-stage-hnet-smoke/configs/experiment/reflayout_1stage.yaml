@@ -1,0 +1,26 @@
+# @package _global_
+# Phase 1 of "grown hierarchy" (B): the reference layout's stage 0 and main network, with no stage 1.
+#   layout  m4 | T10 | m4 ; widths 256 | 512 ; target ratio 3 ; LR 6.25e-4 x [3.03, 0.72] (reflayout's stage-0 and main
+#   multipliers, so the main network keeps its LR after the growth)
+# The grown model (reflayout_2stage + train.grow_from) inserts stage 1 between this stage 0 and this main network.
+# Experiment: lab/experiments/refuted/2026-11-03-grown-hierarchy-keeps-main.md
+experiment:
+  name: reflayout_1stage
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 0.72]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 512]
+  mlp_ratio: 2.75
+  mlp_multiple_of: 128
+  rope_dim: 32
+  main:
+    layers: 10
+  stages:
+    - enc_layers: 4
+      dec_layers: 4
+      enc_layout: m4
+      dec_layout: m4
+      window: 1024
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}

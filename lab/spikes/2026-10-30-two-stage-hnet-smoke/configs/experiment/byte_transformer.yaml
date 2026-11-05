@@ -1,0 +1,11 @@
+# @package _global_
+# Control: isotropic byte Transformer, global causal attention over the whole 4096-byte window.
+# Forward FLOPs/byte 22.35M by hnet.flops (target 22.4M, gate +-5%).
+experiment:
+  name: byte_transformer
+model:
+  d_model: [256]
+  stages: []
+  main: {layers: 6}
+train:
+  lr_mult: [1.0]               # one level: embedding, head and blocks share the base LR

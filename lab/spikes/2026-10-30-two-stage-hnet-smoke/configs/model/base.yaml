@@ -1,0 +1,21 @@
+# Everything that shapes the network lives here (and in experiment/*.yaml for stages).
+kind: hnet                 # hnet: byte model (stages may be empty = byte Transformer) | token: BPE-id Transformer (no stages)
+vocab_size: 256
+chunk_multiple: 128        # chunk counts are right-padded to a multiple of this (bounded shape set)
+d_model: [256, 384, 512]   # one entry per stage, plus the main net
+head_dim: 64
+mlp_ratio: 2.6667
+mlp_multiple_of: 64
+rope_theta: 10000.0
+rope_dim: null             # RoPE dims per head (null = head_dim); the reference H-Net rotates 32 of 64
+init_std: 0.02
+pack_inner: true           # inner levels run on valid positions only (hnet/packing.py; CUDA; same math as padded)
+attn_impl: flex            # flex | sdpa_mask (sliding window); global attention always uses SDPA
+main:
+  layers: 8
+  loops: 1                 # R: the main stack runs R times, weight-tied (hnet/stage.py Main)
+  kind: plain              # plain (hnet/stage.py Main) or parcae (hnet/parcae.py; set layers null and a parcae block)
+stages: []                 # set by experiment/*.yaml; stages[i].enc_layout / dec_layout pick block types (hnet/blocks.py)
+ssm: {d_state: 128, d_conv: 4, expand: 2, headdim: 64, chunk_size: 256}   # Mamba-2 (m/M blocks), the reference H-Net's values
+# Per-stage override: stages[i].attn_impl. Stage 0 sees fixed-length input (flex compiles once);
+# deeper stages see data-dependent lengths (multiples of chunk_multiple); flex compiles them with dynamic shapes.

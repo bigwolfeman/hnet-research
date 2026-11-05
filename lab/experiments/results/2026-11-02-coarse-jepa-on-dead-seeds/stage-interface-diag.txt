@@ -1,0 +1,6 @@
+reflayout_2stage_s1 coarse-jepa-on-dead-seeds-detach runs
+  s0 {'inner_rms': 1.0642, 'resid_rms': 1.6349, 'z_minus_resid_rms': 1.064, 'conf_mean': 0.7124} residual_proj |W| 20.325 decoder in-norm w [15.306, 25.668]
+  s1 {'inner_rms': 1.0126, 'resid_rms': 4.9375, 'z_minus_resid_rms': 0.7112, 'conf_mean': 0.5066} residual_proj |W| 7.795 decoder in-norm w [15.446, 21.617]
+reflayout_2stage_s1 faithful-init-and-rope runs
+  s0 {'inner_rms': 1.2478, 'resid_rms': 1.604, 'z_minus_resid_rms': 1.2077, 'conf_mean': 0.8608} residual_proj |W| 20.349 decoder in-norm w [13.999, 23.489]
+  s1 {'inner_rms': 1.183, 'resid_rms': 2.0071, 'z_minus_resid_rms': 1.1917, 'conf_mean': 0.6448} residual_proj |W| 16.804 decoder in-norm w [15.678, 23.859]

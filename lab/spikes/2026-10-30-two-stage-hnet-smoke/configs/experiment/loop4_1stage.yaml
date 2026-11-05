@@ -1,0 +1,20 @@
+# @package _global_
+# "Looped coarse main" (C), R = 4: matched_1stage (T2/T2 window 512, ratio 4, d 256 | 512) with the main network
+# T2 run 4 time(s), weight-tied (hnet/stage.py Main.loops). Every C arm spends 8 main-block passes per main position:
+#   loop1 = T8 x 1 (29.2M params), loop2 = T4 x 2 (16.4M), loop4 = T2 x 4 (10.0M) ; fwd FLOPs/byte 23.86M each at 4x
+# Experiment: lab/experiments/refuted/2026-11-03-looped-coarse-main.md
+experiment:
+  name: loop4_1stage
+train:
+  lr_mult: [1.5, 1.0]
+  ratio_integral_lr: 0.002
+model:
+  d_model: [256, 512]
+  main:
+    layers: 2
+    loops: 4
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}

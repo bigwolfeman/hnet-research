@@ -1,0 +1,20 @@
+plain reflayout_2stage_s0  akqhdkkz edu=1.3133 go=0.8893 fate_s1=+0.0230 LIVE coarse_shuf_s0=1.1099
+      gates: ratios=[3.0227039492649177, 2.9284640969795204] flops/byte=22674017.058013916 bytes=786432000 params=41801344 loss=0.9411596655845642 step=12000
+plain reflayout_2stage_s1  ipcxldpl edu=1.3661 go=0.9063 fate_s1=-0.0559 dead coarse_shuf_s0=0.4253
+      gates: ratios=[3.041131329068034, 3.0127044596672725] flops/byte=22361831.947265625 bytes=786432000 params=41801344 loss=1.02978515625 step=12000
+plain reflayout_2stage_s2  zplsyk1o edu=1.3177 go=0.8970 fate_s1=-0.0227 dead coarse_shuf_s0=1.1082
+      gates: ratios=[3.01956165535433, 2.887465181058496] flops/byte=22806476.836097717 bytes=786432000 params=41801344 loss=0.9112524390220642 step=12000
+plain reflayout_2stage_s3  5d3o336d edu=1.3383 go=0.8951 fate_s1=-0.0351 dead coarse_shuf_s0=0.8158
+      gates: ratios=[3.0134871436741473, 2.978353162715056] flops/byte=22575274.0206604 bytes=786432000 params=41801344 loss=0.9877250790596008 step=12000
+plain reflayout_2stage_s4  7dffta9c edu=1.3561 go=0.9759 fate_s1=-0.0172 dead coarse_shuf_s0=0.7032
+      gates: ratios=[3.0260710966945057, 2.973169622555707] flops/byte=22534142.641944885 bytes=786432000 params=41801344 loss=0.9834309816360474 step=12000
+read  reflayout_2stage_s0  10m7nh1q edu=1.3176 go=0.9082 fate_s1=-0.0289 dead coarse_shuf_s0=1.0204 read_zero_s0=0.0001 read_shuf_s0=0.0002 read_use=+0.0000
+      gates: ratios=[3.0573224636413467, 2.8836442822670825] flops/byte=23180208.637123108 bytes=786432000 params=42064000 loss=0.9445765614509584 step=12000
+read  reflayout_2stage_s1  ticrl7jl edu=1.3047 go=0.8373 fate_s1=+0.0065 LIVE coarse_shuf_s0=1.1427 read_zero_s0=0.0002 read_shuf_s0=0.0002 read_use=-0.0000
+      gates: ratios=[3.0835845211453576, 2.8758171592879194] flops/byte=23087050.990699768 bytes=786432000 params=42064000 loss=0.9894619584083556 step=12000
+read  reflayout_2stage_s2  jqzif9vg edu=1.3365 go=0.8823 fate_s1=+0.0098 LIVE coarse_shuf_s0=0.7869 read_zero_s0=0.0013 read_shuf_s0=0.0028 read_use=+0.0015
+      gates: ratios=[3.020953555305228, 2.919882229232387] flops/byte=23236417.782691956 bytes=786432000 params=42064000 loss=0.9214236736297609 step=12000
+read  reflayout_2stage_s3  oq0f84g8 edu=1.3204 go=0.9110 fate_s1=+0.0308 LIVE coarse_shuf_s0=1.0336 read_zero_s0=0.0010 read_shuf_s0=0.0013 read_use=+0.0003
+      gates: ratios=[3.0544725772811483, 2.9067170181959816] flops/byte=23124405.16568756 bytes=786432000 params=42064000 loss=0.977196455001831 step=12000
+read  reflayout_2stage_s4  prhk7ung edu=1.3051 go=0.8718 fate_s1=+0.0698 LIVE coarse_shuf_s0=1.1829 read_zero_s0=0.0007 read_shuf_s0=0.0008 read_use=+0.0001
+      gates: ratios=[3.0440182192405167, 2.853589032017562] flops/byte=23331423.457740784 bytes=786432000 params=42064000 loss=0.9405494332313538 step=12000

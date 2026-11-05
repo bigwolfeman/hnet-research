@@ -1,0 +1,22 @@
+grown-hierarchy-p1     reflayout_1stage_s0      zo9jw4vh edu=1.6548 go=1.4383 sql=3.1008  s0: zero=0.0864 shuf=0.0002 fate=-0.0863 dead
+    gates: params=36175552 ratios=[2.990036784624597] flops/byte=36218026.506988525 bytes=262144000 loss=1.1782 step=4000 peak_mem_gb=15.5287
+grown-hierarchy-p1     reflayout_1stage_s1      4bcw63x6 edu=1.7209 go=1.7859 sql=3.6551  s0: zero=0.0688 shuf=0.0033 fate=-0.0656 dead
+    gates: params=36175552 ratios=[2.9940580037062525] flops/byte=36176579.76828766 bytes=262144000 loss=1.2249 step=4000 peak_mem_gb=15.5433
+grown-hierarchy-p1     reflayout_1stage_s2      myh03srw edu=1.5086 go=1.2099 sql=2.6220  s0: zero=0.4575 shuf=0.7431 fate=+0.2857 LIVE
+    gates: params=36175552 ratios=[2.997670077216214] flops/byte=36139459.27390289 bytes=262144000 loss=1.0756 step=4000 peak_mem_gb=15.5507
+grown-hierarchy        reflayout_2stage_s0      hsm8z1b0 edu=1.4595 go=1.0542 sql=2.2586  s0: zero=0.4027 shuf=0.0009 fate=-0.4018 dead | s1: zero=0.0002 shuf=0.0000 fate=-0.0002 dead
+    gates: params=41801344 ratios=[3.0485582542054552, 3.0290525129234807] flops/byte=22286869.526649475 bytes=524288000 loss=1.0740 step=8000 peak_mem_gb=17.4075
+grown-hierarchy        reflayout_2stage_s1      41pqzyjo edu=1.4513 go=1.0493 sql=2.3124  s0: zero=0.1365 shuf=0.0344 fate=-0.1021 dead | s1: zero=0.0182 shuf=0.0000 fate=-0.0181 dead
+    gates: params=41801344 ratios=[3.007066164999541, 2.982032753238979] flops/byte=22593567.04776764 bytes=524288000 loss=1.0082 step=8000 peak_mem_gb=13.8412
+grown-hierarchy        reflayout_2stage_s2      eribnpcj edu=1.3112 go=0.9388 sql=2.0217  s0: zero=0.6658 shuf=1.0939 fate=+0.4281 LIVE | s1: zero=0.3377 shuf=0.6218 fate=+0.2841 LIVE
+    gates: params=41801344 ratios=[3.016720945487186, 2.859300450791353] flops/byte=22902844.526000977 bytes=524288000 loss=0.9372 step=8000 peak_mem_gb=11.5659
+id                     reflayout_2stage_s0      akqhdkkz edu=1.3133 go=0.8893 sql=1.9216  s0: zero=1.1325 shuf=1.1099 fate=-0.0226 dead | s1: zero=0.1346 shuf=0.1576 fate=+0.0230 LIVE
+    gates: params=41801344 ratios=[3.0227039492649177, 2.9284640969795204] flops/byte=22674017.058013916 bytes=786432000 loss=0.9412 step=12000 peak_mem_gb=15.2918
+id                     reflayout_2stage_s1      ipcxldpl edu=1.3661 go=0.9063 sql=1.9562  s0: zero=0.8150 shuf=0.4253 fate=-0.3897 dead | s1: zero=0.0565 shuf=0.0005 fate=-0.0559 dead
+    gates: params=41801344 ratios=[3.041131329068034, 3.0127044596672725] flops/byte=22361831.947265625 bytes=786432000 loss=1.0298 step=12000 peak_mem_gb=16.5467
+id                     reflayout_2stage_s2      zplsyk1o edu=1.3177 go=0.8970 sql=1.9244  s0: zero=0.9569 shuf=1.1082 fate=+0.1514 LIVE | s1: zero=0.1536 shuf=0.1310 fate=-0.0227 dead
+    gates: params=41801344 ratios=[3.01956165535433, 2.887465181058496] flops/byte=22806476.836097717 bytes=786432000 loss=0.9113 step=12000 peak_mem_gb=18.5605
+id                     reflayout_2stage_s3      5d3o336d edu=1.3383 go=0.8951 sql=1.9098  s0: zero=0.9526 shuf=0.8158 fate=-0.1368 dead | s1: zero=0.1143 shuf=0.0792 fate=-0.0351 dead
+    gates: params=41801344 ratios=[3.0134871436741473, 2.978353162715056] flops/byte=22575274.0206604 bytes=786432000 loss=0.9877 step=12000 peak_mem_gb=15.5373
+id                     reflayout_2stage_s4      7dffta9c edu=1.3561 go=0.9759 sql=2.1528  s0: zero=1.0173 shuf=0.7032 fate=-0.3141 dead | s1: zero=0.0657 shuf=0.0485 fate=-0.0172 dead
+    gates: params=41801344 ratios=[3.0260710966945057, 2.973169622555707] flops/byte=22534142.641944885 bytes=786432000 loss=0.9834 step=12000 peak_mem_gb=17.0445

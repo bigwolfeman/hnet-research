@@ -1,0 +1,15 @@
+reflayout_2stage_s1 chl6kcwn finished last step 12000 n tail 20
+  train/jepa/loss                          first500 0.1814  last1000 0.0861
+  train/jepa/pred_cos                      first500 0.8186  last1000 0.9139
+  train/jepa/z_cos_other_pair              first500 0.6608  last1000 -0.6074
+  train/jepa/z_cos_same_pair               first500 0.6694  last1000 -0.6074
+reflayout_2stage_s3 wd8rtp1u finished last step 12000 n tail 20
+  train/jepa/loss                          first500 0.1063  last1000 0.0001
+  train/jepa/pred_cos                      first500 0.8937  last1000 0.9999
+  train/jepa/z_cos_other_pair              first500 0.1364  last1000 -0.4802
+  train/jepa/z_cos_same_pair               first500 0.1408  last1000 -0.4802
+reflayout_2stage_s4 vq3a9gey finished last step 12000 n tail 20
+  train/jepa/loss                          first500 0.1397  last1000 0.0000
+  train/jepa/pred_cos                      first500 0.8603  last1000 1.0000
+  train/jepa/z_cos_other_pair              first500 0.7926  last1000 1.0000
+  train/jepa/z_cos_same_pair               first500 0.7964  last1000 1.0000

@@ -1,0 +1,30 @@
+# Train data must sit on fast local storage: the loader does 16+ random reads per step. ignored/data on the
+# HDD (FUSE) costs ~23 ms per read and cut throughput 2-3x. ignored/data stays the build location.
+dir: ${oc.env:HNET_DATA_DIR,${oc.env:HOME}/data/hnet-bytes}   # files below are relative to it
+train_sources:                 # per batch row: pick a source by weight, then a random offset in its file
+  - {name: edu, file: fineweb-edu/train.bin, weight: 0.9}
+  - {name: go, file: code/go_train.bin, weight: 0.1}
+val_sets:                      # eval hook runs on each; sql is eval only and never appears in train_sources
+  - {name: edu, file: fineweb-edu/val.bin}
+  - {name: go, file: code/go_val.bin}
+  - {name: sql, file: code/sql_val.bin}
+primary_val: edu               # fills the legacy val/bpb, val/ratio_s*, flops/* keys and the probe slices
+bpe_encoding: cl100k_base      # BPE reference for hnet_over_bpe (cached next to each val .bin)
+token:                         # BPE control only (model.kind=token); built by scripts/prepare_bpe.py
+  dir: bpe32k                  # relative to dir above: tokenizer.json, meta.json, token_nbytes.npy, *.u16
+  train: {edu: edu_train.u16, go: go_train.u16}   # keyed by train_sources name; row odds = byte weight / bytes per token
+  val: {edu: edu_val.u16, go: go_val.u16, sql: sql_val.u16}   # keyed by val_sets name
+  eval_windows: 256            # 16 batches of 16 windows of 1024 tokens = about the 1.05M bytes the byte models eval on
+  target_train_bytes: 786432000   # 12000 steps x 16 x 4096: the H-Net arms' budget; train.max_steps is set to match
+probe_file: data/probe_paragraphs.json
+semantic:                      # semantic chunking score at every probe (hnet/semantics.py); null turns it off
+  gold_dir: ${oc.env:HNET_GOLD_DIR,${oc.env:HOME}/data/hnet-bytes/gold}   # SIGMORPHON 2022 + UD English-EWT (README there)
+  text_file: fineweb-edu/val.bin
+  go_file: code/go_val.bin
+  row_len: 2048
+  text_rows: 64                # word and hidden levels
+  morph_rows: 256              # gold covers about 14% of running edu words
+  go_rows: 32
+  phrase_rows: 64
+num_workers: 0
+prefetch: 2                    # batches the loader thread keeps ready on the device (0 = read inline)

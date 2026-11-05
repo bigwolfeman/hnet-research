@@ -1,0 +1,4 @@
+reference-layout-vs-bpe reflayout_2stage_s0      pvw7vrh2 edu=1.0905 go=0.5806 sql=1.1891  s0: zero=1.4635 shuf=1.9441 fate=+0.4806 LIVE | s1: zero=0.4748 shuf=0.8569 fate=+0.3821 LIVE
+    gates: params=41801344 ratios=[3.163172898535423, 2.6999763799408685] flops/byte=22751841.445716854 bytes=12582912000 loss=0.7924 step=192000 peak_mem_gb=15.3740
+reference-layout-vs-bpe reflayout_2stage_s1      tq1xn0ik edu=1.0979 go=0.5872 sql=1.2072  s0: zero=1.1025 shuf=1.6185 fate=+0.5160 LIVE | s1: zero=0.3640 shuf=0.6695 fate=+0.3055 LIVE
+    gates: params=41801344 ratios=[3.1623810988666317, 2.6390277291394733] flops/byte=22955862.70471191 bytes=12582912000 loss=0.8768 step=192000 peak_mem_gb=16.8289

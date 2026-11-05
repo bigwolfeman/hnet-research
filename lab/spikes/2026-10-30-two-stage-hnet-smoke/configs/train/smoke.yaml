@@ -1,0 +1,39 @@
+seq_len: 4096
+batch_size: 16
+max_steps: 1000
+lr: 8.0e-4                    # base LR; per-stage LR = lr * lr_mult[stage]
+lr_mult: [1.5, 1.2, 1.0]      # stage 0 (+embed/head), stage 1, main. Length = n_stages + 1
+betas: [0.9, 0.95]
+weight_decay: 0.1
+grad_clip: 1.0
+warmup_steps: 50
+decay_frac: 0.2               # WSD: warmup, stable, linear decay over the last decay_frac
+min_lr_frac: 0.0
+compile: false                # torch.compile the stacks (not the chunking glue)
+amp_dtype: bfloat16
+log_every: 10
+grad_stats: true               # per-level grad norm and AdamW update rms every log_every (hnet/gradstats.py); read-only
+eval_every: 100
+eval_batches: 8
+probe_every: 200
+coarse_probe_batches: 8       # eval batches of the primary domain for the coarse-path probe (every eval); 0 = off
+init_from: null                 # path to a {model: state_dict} file loaded strictly before training (train.py); null = fresh init
+grow_from: null                 # final.pt of an N-stage run: its weights go into this (N+1)-stage model, the new stage above main starts fresh (hnet/grow.py); null = off
+ratio_integral_lr: 0.0          # > 0: RatioController, integral term that pins each ratio to its target (hnet/chunking.py); 0 = off
+resume_every: 0                 # > 0: resume.pt every N steps (multiple of eval_every); a rerun in the same Hydra run dir continues
+ladder_fracs: []                # WSD compute ladder: extra budgets (fractions of max_steps) decayed off the stable phase
+time_limit_s: 0               # 0 = off. Hard stop for smoke runs.
+save_checkpoint: true        # final.pt in the Hydra run dir (outputs/...)
+jepa:                           # coarse JEPA auxiliary loss (hnet/jepa.py); weight 0 = off (no extra forward, no rng draws)
+  weight: 0.0
+  pairs_dir: null               # dir with a.bin / b.bin view records (scripts/goviews), relative to data.dir
+  views: [code, doc]            # record files <name>.bin in pairs_dir: view a, view b
+  widths: [512, 512]            # bytes per row of each view (records are cut, then zero-padded); multiples of chunk_multiple
+  pairs_per_step: 32            # SIGReg needs a batch: the paper uses 256 items, a 2-pair batch collapsed
+  proj_hidden: 2048             # projector MLP: main d -> proj_hidden -> proj_dim
+  proj_dim: 128
+  sigreg_lambda: 0.16           # loss = lambda * SIGReg + (1 - lambda) * invariance; SIGReg scales with N, so the
+                                # paper's 0.02 at batch 256 is 0.02 * 256 / 32 = 0.16 at 32 pairs
+  sigreg_slices: 256            # random 1-D directions per step
+  sigreg_knots: 17              # Epps-Pulley integration points on [-5, 5]
+  seed_offset: 1000003          # PairLoader seed = seed + seed_offset (its own stream)

@@ -1,0 +1,19 @@
+{
+ "model": "ignored/runs/compute-ladder-vs-bpe-r2/matched_1stage_s0/final.pt",
+ "base_bpb": 1.1581845607743306,
+ "rise": {
+  "0": {
+   "zero": 2.431841014311449,
+   "shuffle": 1.7050831346491369
+  }
+ },
+ "share": {
+  "0": 1.2596903294324875
+ },
+ "bytes_per_chunk": [
+  4.115064321426609
+ ],
+ "ratios": [
+  4.115064321426609
+ ]
+}

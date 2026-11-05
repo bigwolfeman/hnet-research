@@ -1,0 +1,6 @@
+loop1_1stage_s0  loops=1  doc share  h0=0.8079  h1=0.2214
+loop2_1stage_s0  loops=2  doc share  h0=0.7362  h1=0.0000  h2=0.0000
+loop4_1stage_s0  loops=4  doc share  h0=0.8044  h1=0.0000  h2=0.0000  h3=0.0000  h4=0.0000
+loop1_1stage_s2  loops=1  doc share  h0=0.4501  h1=0.4590
+loop2_1stage_s2  loops=2  doc share  h0=0.8223  h1=0.3431  h2=0.0001
+loop4_1stage_s2  loops=4  doc share  h0=0.7459  h1=0.0000  h2=0.0000  h3=0.0000  h4=0.0000

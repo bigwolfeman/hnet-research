@@ -1,0 +1,21 @@
+reflayout_2stage_s1 i581xzb1 finished last step 12000 n tail 20
+  train/jepa/inv                           first500 0.2316  last1000 0.2547
+  train/jepa/loss                          first500 1.2749  last1000 1.5245
+  train/jepa/sigreg                        first500 6.7520  last1000 8.1912
+  train/jepa/top1_doc_given_code           first500 0.0540  last1000 0.0344
+  train/jepa/z_cos_other_pair              first500 0.1649  last1000 0.1928
+  train/jepa/z_cos_same_pair               first500 0.2360  last1000 0.1970
+reflayout_2stage_s3 xdktm0nr finished last step 12000 n tail 20
+  train/jepa/inv                           first500 0.1928  last1000 0.2664
+  train/jepa/loss                          first500 1.3943  last1000 1.2526
+  train/jepa/sigreg                        first500 7.7018  last1000 6.4303
+  train/jepa/top1_doc_given_code           first500 0.0653  last1000 0.0297
+  train/jepa/z_cos_other_pair              first500 0.1543  last1000 0.0599
+  train/jepa/z_cos_same_pair               first500 0.2386  last1000 0.0424
+reflayout_2stage_s4 191clzls finished last step 12000 n tail 20
+  train/jepa/inv                           first500 0.2602  last1000 0.3172
+  train/jepa/loss                          first500 1.0609  last1000 0.7546
+  train/jepa/sigreg                        first500 5.2644  last1000 3.0510
+  train/jepa/top1_doc_given_code           first500 0.0568  last1000 0.0437
+  train/jepa/z_cos_other_pair              first500 0.1146  last1000 0.0005
+  train/jepa/z_cos_same_pair               first500 0.1686  last1000 0.0146

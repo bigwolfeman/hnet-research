@@ -1,0 +1,18 @@
+parcae-coarse-main     parcae_r2_1stage_s0      fj02tf2j edu=1.5286 go=1.0192 sql=1.8500  s0: zero=2.9742 shuf=0.8972 fate=-2.0770 dead
+    gates: params=23342080 ratios=[4.049337709982622] flops/byte=23909034.376098633 bytes=786432000 loss=1.0528 step=12000 peak_mem_gb=10.6691
+parcae-coarse-main     parcae_r2_1stage_s1      5kvuseai edu=1.5568 go=1.0739 sql=2.0062  s0: zero=3.8325 shuf=0.0949 fate=-3.7375 dead
+    gates: params=23342080 ratios=[4.026835946650691] flops/byte=24004329.491485596 bytes=786432000 loss=1.1497 step=12000 peak_mem_gb=11.2071
+parcae-coarse-main     parcae_r2_1stage_s2      unwkowfr edu=1.5730 go=1.0718 sql=1.8964  s0: zero=4.0860 shuf=0.0554 fate=-4.0306 dead
+    gates: params=23342080 ratios=[4.116663722199321] flops/byte=23630864.22732544 bytes=786432000 loss=1.0294 step=12000 peak_mem_gb=10.3734
+parcae-coarse-main     parcae_r6_1stage_s0      3v2exqwj edu=1.4878 go=0.9999 sql=1.8282  s0: zero=3.6465 shuf=0.8675 fate=-2.7790 dead
+    gates: params=13705216 ratios=[4.037767817260447] flops/byte=23957884.32470703 bytes=786432000 loss=1.0296 step=12000 peak_mem_gb=9.8010
+parcae-coarse-main     parcae_r6_1stage_s1      u25meyq8 edu=1.5644 go=1.0638 sql=1.9456  s0: zero=2.9505 shuf=0.0982 fate=-2.8523 dead
+    gates: params=13705216 ratios=[3.9406224867903825] flops/byte=24380759.009887695 bytes=786432000 loss=1.1479 step=12000 peak_mem_gb=9.7944
+parcae-coarse-main     parcae_r6_1stage_s2      hrz1echo edu=1.5598 go=1.0571 sql=1.8861  s0: zero=3.7088 shuf=0.1512 fate=-3.5576 dead
+    gates: params=13705216 ratios=[4.025985594274569] flops/byte=24007954.14892578 bytes=786432000 loss=1.0230 step=12000 peak_mem_gb=9.5568
+id                     loop1_1stage_s0          zhpmgzlf edu=1.5046 go=1.0095 sql=1.8579  s0: zero=3.6300 shuf=0.4426 fate=-3.1874 dead
+    gates: params=29240832 ratios=[4.078126336913994] flops/byte=23531708.43371582 bytes=786432000 loss=1.0362 step=12000 peak_mem_gb=13.1025
+id                     loop1_1stage_s1          mzq49grx edu=1.5311 go=1.0365 sql=1.9177  s0: zero=3.8462 shuf=0.3693 fate=-3.4770 dead
+    gates: params=29240832 ratios=[3.99016705354085] flops/byte=23899415.782348633 bytes=786432000 loss=1.1288 step=12000 peak_mem_gb=12.7516
+id                     loop1_1stage_s2          zssjv0k6 edu=1.4135 go=0.9662 sql=1.7953  s0: zero=3.6605 shuf=1.0319 fate=-2.6286 dead
+    gates: params=29240832 ratios=[3.8988347103135945] flops/byte=24301003.103637695 bytes=786432000 loss=0.9341 step=12000 peak_mem_gb=11.7314

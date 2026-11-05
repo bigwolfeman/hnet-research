@@ -1,0 +1,42 @@
+{
+    "final_val_bpb": 1.9921804918067227,
+    "bytes_per_s": 93704.73479443038,
+    "step_time_ms": 349.69417577336407,
+    "peak_mem_gb": 7.059610843658447,
+    "flops_fwd_per_byte": 23235844.304714918,
+    "ratios": [
+        3.1594272766716482,
+        2.009487375389967
+    ],
+    "wandb_url": "wandb:hnet-smoke/runs/giqio0uu",
+    "params": 37060224,
+    "probes": {
+        "probe/ref_cut_rate": 0.34320068359375,
+        "probe/align_s0_model_precision": 0.7970986829547624,
+        "probe/align_s0_model_recall": 0.7426640583318513,
+        "probe/align_s0_model_f1": 0.7689191677407476,
+        "probe/align_s0_stride_precision": 0.3388761467889908,
+        "probe/align_s0_stride_recall": 0.3153121109727903,
+        "probe/align_s0_stride_f1": 0.32666973744818056,
+        "probe/align_s0_cuts_per_byte": 0.31976318359375,
+        "probe/align_s1_model_precision": 0.7852112676056338,
+        "probe/align_s1_model_recall": 0.35692690734483373,
+        "probe/align_s1_model_f1": 0.49076904267025306,
+        "probe/align_s1_stride_precision": 0.33687106918238996,
+        "probe/align_s1_stride_recall": 0.1524097456873555,
+        "probe/align_s1_stride_f1": 0.2098689849393902,
+        "probe/align_s1_cuts_per_byte": 0.156005859375,
+        "probe/icl_s0_occ1": 1.65,
+        "probe/icl_s0_occ2": 1.65,
+        "probe/icl_s0_occ3": 1.65,
+        "probe/icl_s0_occ4": 1.65,
+        "probe/icl_s0_occ5": 1.65,
+        "probe/icl_s0_drop_1_to_5": 0.0,
+        "probe/icl_s1_occ1": 1.2,
+        "probe/icl_s1_occ2": 1.2,
+        "probe/icl_s1_occ3": 1.2,
+        "probe/icl_s1_occ4": 1.25,
+        "probe/icl_s1_occ5": 1.2,
+        "probe/icl_s1_drop_1_to_5": 0.0
+    }
+}

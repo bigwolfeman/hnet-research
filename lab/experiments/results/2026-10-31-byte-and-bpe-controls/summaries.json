@@ -1,0 +1,100 @@
+{
+ "byte_transformer_s0": {
+  "final_val_bpb": 1.4632234812863107,
+  "bytes_per_s": 1629520.0409971806,
+  "step_time_ms": 40.21797728851215,
+  "peak_mem_gb": 4.379729747772217,
+  "flops_fwd_per_byte": 22350848.0,
+  "ratios": [],
+  "wandb_url": "wandb:hnet-router/runs/s37db7m1",
+  "params": 4951296,
+  "probes": {},
+  "domains": {
+   "val/edu/bpb": 1.4632234812863107,
+   "val/edu/ce": 1.014229230582714,
+   "val/edu/bpe_bytes_per_token": 4.68311181857357,
+   "val/go/bpb": 0.8871626315967472,
+   "val/go/ce": 0.6149342767894268,
+   "val/go/bpe_bytes_per_token": 3.5017589860928515,
+   "val/sql/bpb": 1.7341592847770166,
+   "val/sql/ce": 1.2020276188850403,
+   "val/sql/bpe_bytes_per_token": 2.684075337849731
+  },
+  "run_dir": "lab/spikes/2026-10-30-two-stage-hnet-smoke/outputs/byte_transformer/2026-10-31_04-36-52/"
+ },
+ "byte_transformer_s1": {
+  "final_val_bpb": 1.4400061620106754,
+  "bytes_per_s": 1648545.2741919293,
+  "step_time_ms": 39.753836928818295,
+  "peak_mem_gb": 4.380218029022217,
+  "flops_fwd_per_byte": 22350848.0,
+  "ratios": [],
+  "wandb_url": "wandb:hnet-router/runs/yv2oj0ru",
+  "params": 4951296,
+  "probes": {},
+  "domains": {
+   "val/edu/bpb": 1.4400061620106754,
+   "val/edu/ce": 0.9981362111866474,
+   "val/edu/bpe_bytes_per_token": 4.68311181857357,
+   "val/go/bpb": 0.8957823106922079,
+   "val/go/ce": 0.6209089830517769,
+   "val/go/bpe_bytes_per_token": 3.5017589860928515,
+   "val/sql/bpb": 1.7163300314680936,
+   "val/sql/ce": 1.1896693222224712,
+   "val/sql/bpe_bytes_per_token": 2.684075337849731
+  },
+  "run_dir": "lab/spikes/2026-10-30-two-stage-hnet-smoke/outputs/byte_transformer/2026-10-31_04-45-44/"
+ },
+ "bpe_transformer_s0": {
+  "final_val_bpb": 1.2734353153701166,
+  "bytes_per_s": 1377327.318555285,
+  "step_time_ms": 50.731049854929665,
+  "peak_mem_gb": 10.743313789367676,
+  "flops_fwd_per_byte": 22127070.435612243,
+  "ratios": [],
+  "wandb_url": "wandb:hnet-router/runs/4mrq7hzg",
+  "params": 62465536,
+  "probes": {},
+  "domains": {
+   "val/edu/bpb": 1.2734353153701166,
+   "val/edu/ce": 0.882678098474261,
+   "val/edu/ce_per_token": 4.021188259124756,
+   "val/edu/bytes_per_token": 4.555667877197266,
+   "val/go/bpb": 0.8643044366095078,
+   "val/go/ce": 0.5990901833813322,
+   "val/go/ce_per_token": 1.731905035674572,
+   "val/go/bytes_per_token": 2.8908920288085938,
+   "val/sql/bpb": 1.670886303712091,
+   "val/sql/ce": 1.1581701304542642,
+   "val/sql/ce_per_token": 2.428037866950035,
+   "val/sql/bytes_per_token": 2.0964431762695312
+  },
+  "run_dir": "lab/spikes/2026-10-30-two-stage-hnet-smoke/outputs/bpe_transformer/2026-10-31_04-55-07/"
+ },
+ "bpe_transformer_s1": {
+  "final_val_bpb": 1.270790549577788,
+  "bytes_per_s": 1379878.632271354,
+  "step_time_ms": 50.63725115387114,
+  "peak_mem_gb": 10.743313789367676,
+  "flops_fwd_per_byte": 22127070.435612243,
+  "ratios": [],
+  "wandb_url": "wandb:hnet-router/runs/iup9a0wq",
+  "params": 62465536,
+  "probes": {},
+  "domains": {
+   "val/edu/bpb": 1.270790549577788,
+   "val/edu/ce": 0.8808448865220672,
+   "val/edu/ce_per_token": 4.012836754322052,
+   "val/edu/bytes_per_token": 4.555667877197266,
+   "val/go/bpb": 0.8596137744542367,
+   "val/go/ce": 0.5958388641334468,
+   "val/go/ce_per_token": 1.722505822777748,
+   "val/go/bytes_per_token": 2.8908920288085938,
+   "val/sql/bpb": 1.687803355996297,
+   "val/sql/ce": 1.169896137548447,
+   "val/sql/ce_per_token": 2.4526207745075226,
+   "val/sql/bytes_per_token": 2.0964431762695312
+  },
+  "run_dir": "lab/spikes/2026-10-30-two-stage-hnet-smoke/outputs/bpe_transformer/2026-10-31_05-06-10/"
+ }
+}

@@ -1,0 +1,10 @@
+2026-11-01T03:20:49-06:00 START blog_split_2stage_s0
+2026-11-01T06:26:55-06:00 DONE  blog_split_2stage_s0 "final_val_bpb": 1.2944160009960204
+2026-11-01T06:26:55-06:00 ALL DONE blog_split_2stage:0
+2026-11-01T06:26:55-06:00 START bpe_transformer_s0
+2026-11-01T09:02:47-06:00 DONE  bpe_transformer_s0 "final_val_bpb": 1.1155810444131005
+2026-11-01T09:02:47-06:00 ALL DONE bpe_transformer:0
+2026-11-01T09:02:47-06:00 START matched_1stage_s0
+2026-11-01T12:03:43-06:00 DONE  matched_1stage_s0 "final_val_bpb": 1.1580908302296105
+2026-11-01T12:03:43-06:00 ALL DONE matched_1stage:0
+2026-11-01T12:03:43-06:00 LADDER DONE

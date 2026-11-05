@@ -1,0 +1,18 @@
+# @package _global_
+# 1-stage H-Net at BPE-matched compute: lookahead_1stage with main 8 -> 7 layers, ratio held at 4x.
+# Fwd FLOPs/byte at 4x: 21.99M = BPE control 22.27M -1.2%. Split stage0 / main = 40% / 59%. 26.0M params.
+# Experiment: lab/experiments/refuted/2026-11-01-compute-ladder-vs-bpe.md
+experiment:
+  name: matched_1stage
+train:
+  lr_mult: [1.5, 1.0]
+  ratio_integral_lr: 0.002     # calibrated 2026-11-01 (note: .agents/notes/implemented/feature/2026-10-31-ratio-controller.md)
+model:
+  d_model: [256, 512]
+  main:
+    layers: 7
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}

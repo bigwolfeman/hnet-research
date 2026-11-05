@@ -1,0 +1,27 @@
+# @package _global_
+# Blog split 2-stage H-Net with Mamba-2 outer stages: every encoder/decoder attention mixer becomes Mamba-2.
+#   stage 0: T2 -> M2 (Mamba-2 + SwiGLU) ; stage 1: T1 -> m1 (Mamba-2, no MLP; the reference's stage-1 Mamba blocks
+#   have no MLP either). With M1 at stage 1 the arm costs +5.8% FLOPs/byte; m1 brings it to 22.31M at 4 x 2 (+0.2% vs
+#   BPE 22.27M; blog split 22.44M). Split stage0/stage1/main 42/6/51%. Main network, widths, router, targets 4 x 2, LR
+#   unchanged.
+# Mamba-2 settings: model.ssm (configs/model/base.yaml) = the reference H-Net's (d_state 128, expand 2, headdim 64).
+# Experiment: lab/experiments/refuted/2026-11-02-our-hnet-with-mamba2.md
+defaults:
+  - blog_split_2stage
+  - _self_
+experiment:
+  name: blog_split_2stage_mamba
+model:
+  stages:
+    - enc_layers: 2
+      dec_layers: 2
+      enc_layout: M2
+      dec_layout: M2
+      window: 512
+      router: {name: lookahead, target_ratio: 4.0, loss_weight: 0.03, kwargs: {}}
+    - enc_layers: 1
+      dec_layers: 1
+      enc_layout: m1
+      dec_layout: m1
+      window: 256
+      router: {name: lookahead, target_ratio: 2.0, loss_weight: 0.03, kwargs: {}}

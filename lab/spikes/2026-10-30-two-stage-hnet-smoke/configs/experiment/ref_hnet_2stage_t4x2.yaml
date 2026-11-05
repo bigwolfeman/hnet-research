@@ -1,0 +1,13 @@
+# @package _global_
+# Reference 2-stage H-Net with our chunk targets 4 x 2 (blog split) in place of the paper's 3 x 3.
+# Fwd FLOPs/byte at 4 x 2: 22.32M (BPE 22.27M, +0.2%). Split stage0/stage1/main 44/16/39%.
+# Experiment: lab/experiments/refuted/2026-11-01-reference-hnet-difference-ablation.md
+defaults:
+  - ref_hnet_2stage
+  - _self_
+experiment:
+  name: ref_hnet_2stage_t4x2
+model:
+  stages:
+    - router: {target_ratio: 4.0, loss_weight: 0.03}
+    - router: {target_ratio: 2.0, loss_weight: 0.03}

@@ -1,0 +1,28 @@
+# @package _global_
+# Reference 2-stage H-Net (goombalab/hnet code and recipe) at our scale, data, and budget.
+# Layout = hnet_2stage_L's (m4 | T1m4 | T_n | m4T1 | m4) with widths scaled down; main depth sets FLOPs:
+#   fwd FLOPs/byte at targets 3 x 3: 22.58M (BPE control 22.27M, +1.4%). Split stage0/stage1/main 44/22/34%
+#   (hnet_2stage_L at 3 x 3: 34/17/49%).
+# Recipe from the H-Net paper (arXiv 2507.07955): targets (3, 3), alpha 0.03, peak LR 6.25e-4 (L), per-stage LR
+# multipliers from its Eq. 11 with N_GPT 4.6 and D = (256, 256, 512): [3.03, 1.75, 0.72]. No ratio controller.
+# Experiment: lab/experiments/successes/2026-11-01-reference-hnet-at-our-scale.md
+defaults:
+  - override /model: ref_hnet
+experiment:
+  name: ref_hnet_2stage
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 1.75, 0.72]
+  ratio_integral_lr: 0.0
+model:
+  d_model: [256, 256, 512]
+  stages:
+    - router: {target_ratio: 3.0, loss_weight: 0.03}
+    - router: {target_ratio: 3.0, loss_weight: 0.03}
+  ref:
+    arch_layout: ["m4", ["T1m4", ["T10"], "m4T1"], "m4"]
+    d_intermediate: [0, 768, 1408]
+    attn_cfg:
+      num_heads: [4, 4, 8]
+      rotary_emb_dim: [32, 32, 32]
+      window_size: [1023, 1023, -1]

@@ -1,0 +1,14 @@
+# @package _global_
+# Reference 2-stage H-Net with Transformer outer stages: every Mamba-2 block of ref_hnet_2stage becomes an
+# attention + SwiGLU block (m4 -> T2, at the reference windows). Everything else is ref_hnet_2stage.
+# Fwd FLOPs/byte at 3 x 3: 22.73M (BPE 22.27M, +2.1%; ref_hnet_2stage 22.58M). Split stage0/stage1/main 44/21/34%.
+# Experiment: lab/experiments/refuted/2026-11-01-reference-hnet-difference-ablation.md
+defaults:
+  - ref_hnet_2stage
+  - _self_
+experiment:
+  name: ref_hnet_2stage_touter
+model:
+  ref:
+    arch_layout: ["T2", ["T1T2", ["T10"], "T2T1"], "T2"]
+    d_intermediate: [640, 768, 1408]

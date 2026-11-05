@@ -1,0 +1,398 @@
+{
+ "checkpoint": "ignored/runs/reference-layout-vs-bpe/reflayout_2stage_s0/ladder_12000.pt",
+ "gate_edu_bpb": 1.318440461724444,
+ "cuts_per_byte_intact": [
+  0.3300933837890625,
+  0.11188507080078125
+ ],
+ "s0": {
+  "hidden_words": {
+   "join_rate": 0.5177401129943503,
+   "matched_control_rate": 0.24378557296768102,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.3855421686746988,
+     "n_join": 249,
+     "control_rate": 0.17683870060469695,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.8365714285714285,
+     "n_join": 1750,
+     "control_rate": 0.4857615894039735,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.6878115088355233,
+     "n_join": 2207,
+     "control_rate": 0.30686109945446916,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.5519194461925739,
+     "n_join": 1589,
+     "control_rate": 0.21218902198236145,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.5309423347398031,
+     "n_join": 1422,
+     "control_rate": 0.161089625021019,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.4209284028324154,
+     "n_join": 1271,
+     "control_rate": 0.15773552290406223,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.44680851063829785,
+     "n_join": 1316,
+     "control_rate": 0.1613780598368087,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.4218591691995947,
+     "n_join": 7896,
+     "control_rate": 0.2234743411927878,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.8714648125528517,
+   "k0": 0.18117062655232205,
+   "k1": 0.16480676328502417,
+   "k2": 0.47117910232356763,
+   "k3+": 0.18396811073981895
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 2.3412744730251553,
+    "bits_nocut": 1.3727432246130393,
+    "n_cut": 6823,
+    "n_nocut": 34577
+   },
+   "k2": {
+    "bits_cut": 1.544589624293144,
+    "bits_nocut": 0.9422747092142811,
+    "n_cut": 16324,
+    "n_nocut": 18321
+   },
+   "k3": {
+    "bits_cut": 1.1251287185784893,
+    "bits_nocut": 0.7146095581579439,
+    "n_cut": 8001,
+    "n_nocut": 18901
+   },
+   "k4": {
+    "bits_cut": 1.4372511894785363,
+    "bits_nocut": 0.4225695036393559,
+    "n_cut": 3701,
+    "n_nocut": 17226
+   }
+  }
+ },
+ "s1": {
+  "hidden_words": {
+   "join_rate": 0.05570621468926554,
+   "matched_control_rate": 0.11436055406048039,
+   "n_joins": 17700,
+   "n_joins_kept": 17700,
+   "dropped_frac": 0.0,
+   "by_k": {
+    "1": {
+     "join_rate": 0.012048192771084338,
+     "n_join": 249,
+     "control_rate": 0.035086485726339475,
+     "n_control": 14222
+    },
+    "2": {
+     "join_rate": 0.10285714285714286,
+     "n_join": 1750,
+     "control_rate": 0.042798013245033115,
+     "n_control": 12080
+    },
+    "3": {
+     "join_rate": 0.06524694154961486,
+     "n_join": 2207,
+     "control_rate": 0.043747377255560216,
+     "n_control": 9532
+    },
+    "4": {
+     "join_rate": 0.0434235368156073,
+     "n_join": 1589,
+     "control_rate": 0.07542450967487166,
+     "n_control": 7597
+    },
+    "5": {
+     "join_rate": 0.07032348804500703,
+     "n_join": 1422,
+     "control_rate": 0.07970405246342693,
+     "n_control": 5947
+    },
+    "6": {
+     "join_rate": 0.05350118017309206,
+     "n_join": 1271,
+     "control_rate": 0.0935609334485739,
+     "n_control": 4628
+    },
+    "7": {
+     "join_rate": 0.04711246200607903,
+     "n_join": 1316,
+     "control_rate": 0.12360229676639468,
+     "n_control": 3309
+    },
+    "8": {
+     "join_rate": 0.04559270516717325,
+     "n_join": 7896,
+     "control_rate": 0.16834257975034675,
+     "n_control": 5768
+    }
+   }
+  },
+  "position_rates": {
+   "ws": 0.42567884994832283,
+   "k0": 0.06879422653357702,
+   "k1": 0.03398550724637681,
+   "k2": 0.027247799105209986,
+   "k3+": 0.058711539033604696
+  },
+  "surprise": {
+   "k1": {
+    "bits_cut": 1.1305019209633143,
+    "bits_nocut": 1.5465016878978899,
+    "n_cut": 1407,
+    "n_nocut": 39993
+   },
+   "k2": {
+    "bits_cut": 1.4096065393323904,
+    "bits_nocut": 1.2209319427122742,
+    "n_cut": 944,
+    "n_nocut": 33701
+   },
+   "k3": {
+    "bits_cut": 1.396353798609286,
+    "bits_nocut": 0.8157468126042257,
+    "n_cut": 971,
+    "n_nocut": 25931
+   },
+   "k4": {
+    "bits_cut": 2.303519412729199,
+    "bits_nocut": 0.5193182889013521,
+    "n_cut": 970,
+    "n_nocut": 19957
+   }
+  }
+ },
+ "stage1_units": {
+  "words_per_chunk": {
+   "0": 0.16694955529906985,
+   "1": 0.4562427863398737,
+   "2": 0.20619186638604114,
+   "3": 0.11925453187589109,
+   "4": 0.0388010048204223,
+   "5": 0.009267431597528684,
+   "6": 0.0024781044198519927
+  },
+  "top_multiword": [
+   [
+    " they are",
+    17
+   ],
+   [
+    " it is",
+    15
+   ],
+   [
+    " the first",
+    13
+   ],
+   [
+    " it was",
+    11
+   ],
+   [
+    " children wit",
+    11
+   ],
+   [
+    " to be",
+    10
+   ],
+   [
+    " it t",
+    10
+   ],
+   [
+    " the fact",
+    9
+   ],
+   [
+    " the last",
+    9
+   ],
+   [
+    " them t",
+    7
+   ],
+   [
+    " you have",
+    7
+   ],
+   [
+    "The study",
+    7
+   ],
+   [
+    " the United States",
+    7
+   ],
+   [
+    " the University of",
+    7
+   ],
+   [
+    "The first",
+    7
+   ],
+   [
+    " climate change",
+    7
+   ],
+   [
+    "/ 5 ",
+    7
+   ],
+   [
+    " the other",
+    6
+   ],
+   [
+    " it as",
+    6
+   ],
+   [
+    " not be",
+    6
+   ],
+   [
+    " the time",
+    6
+   ],
+   [
+    " more tha",
+    6
+   ],
+   [
+    " access t",
+    6
+   ],
+   [
+    " the back of",
+    6
+   ],
+   [
+    " used t",
+    6
+   ],
+   [
+    " teacher reports of",
+    6
+   ],
+   [
+    "The most",
+    5
+   ],
+   [
+    " it has",
+    5
+   ],
+   [
+    " the use of",
+    5
+   ],
+   [
+    " the early",
+    5
+   ],
+   [
+    " the same time",
+    5
+   ],
+   [
+    " the past",
+    5
+   ],
+   [
+    " you want",
+    5
+   ],
+   [
+    " a long",
+    5
+   ],
+   [
+    " up t",
+    5
+   ],
+   [
+    " out of",
+    5
+   ],
+   [
+    " the country",
+    5
+   ],
+   [
+    "- uses",
+    5
+   ],
+   [
+    " one of the most",
+    4
+   ],
+   [
+    " this time",
+    4
+   ]
+  ]
+ },
+ "semantic": {
+  "sem/word_s0_auroc": 0.9128851778391537,
+  "sem/word_s0_n_pos": 42473,
+  "sem/word_s0_seen_frac": 1.0,
+  "sem/word_s1_auroc": 0.7029693908449087,
+  "sem/word_s1_n_pos": 39150,
+  "sem/word_s1_seen_frac": 0.36453920094756503,
+  "sem/hidden_s0_auroc": 0.7537288289331904,
+  "sem/hidden_s0_n_pos": 17774,
+  "sem/hidden_s0_seen_frac": 1.0,
+  "sem/hidden_s1_auroc": 0.4553314991122374,
+  "sem/hidden_s1_n_pos": 9051,
+  "sem/hidden_s1_seen_frac": 0.22514129078953446,
+  "sem/gotok_s0_auroc": 0.8685362325744654,
+  "sem/gotok_s0_n_pos": 9383,
+  "sem/gotok_s0_seen_frac": 1.0,
+  "sem/gotok_s1_auroc": 0.7122911318882593,
+  "sem/gotok_s1_n_pos": 6914,
+  "sem/gotok_s1_seen_frac": 0.2681998995867609,
+  "sem/morph_s0_auroc": 0.4879343794226497,
+  "sem/morph_s0_n_pos": 4793,
+  "sem/morph_s0_seen_frac": 1.0,
+  "sem/morph_s1_auroc": 0.569433996005906,
+  "sem/morph_s1_n_pos": 516,
+  "sem/morph_s1_seen_frac": 0.1349708456712018,
+  "sem/phrase_s0_auroc": 0.5935723853623958,
+  "sem/phrase_s0_n_pos": 3634,
+  "sem/phrase_s0_seen_frac": 1.0,
+  "sem/phrase_s1_auroc": 0.5655164466835072,
+  "sem/phrase_s1_n_pos": 3508,
+  "sem/phrase_s1_seen_frac": 0.9337718096282086
+ },
+ "s1_cuts_on_s0_cuts": 1.0
+}

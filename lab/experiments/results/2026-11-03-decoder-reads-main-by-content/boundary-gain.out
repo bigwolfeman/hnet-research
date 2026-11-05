@@ -1,0 +1,12 @@
+read/reflayout_2stage_s0: in-word chunk starts at k=1..3: 81 62 217 of 80314 80280 67499
+read/reflayout_2stage_s0: mean shuffle cost 2.5534 bits/byte  D +0.6368  per k -0.0476 -0.0546 +2.0125
+read/reflayout_2stage_s1: in-word chunk starts at k=1..3: 81 62 570 of 80314 80280 67499
+read/reflayout_2stage_s1: mean shuffle cost 0.3597 bits/byte  D +0.0710  per k +0.0642 +0.0153 +0.1336
+read/reflayout_2stage_s2: in-word chunk starts at k=1..3: 81 62 239 of 80314 80280 67499
+read/reflayout_2stage_s2: mean shuffle cost 0.3965 bits/byte  D +0.1312  per k +0.0391 -0.0511 +0.4056
+synth/reflayout_2stage_s0: in-word chunk starts at k=1..3: 81 62 569 of 80314 80280 67499
+synth/reflayout_2stage_s0: mean shuffle cost 2.7664 bits/byte  D +0.2753  per k -0.0487 -0.0401 +0.9146
+synth/reflayout_2stage_s1: in-word chunk starts at k=1..3: 81 63 1584 of 80314 80280 67499
+synth/reflayout_2stage_s1: mean shuffle cost 0.2176 bits/byte  D +1.0253  per k +1.1692 +1.6827 +0.2241
+synth/reflayout_2stage_s2: in-word chunk starts at k=1..3: 81 62 905 of 80314 80280 67499
+synth/reflayout_2stage_s2: mean shuffle cost 0.2719 bits/byte  D +0.3837  per k +0.4077 +0.6501 +0.0932

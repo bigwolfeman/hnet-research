@@ -1,0 +1,13 @@
+# @package _global_
+# Blog split 2-stage H-Net with the H-Net paper's per-stage LR (arXiv 2507.07955 Eq. 11) in place of ours.
+#   lambda_s = sqrt(N_GPT * prod_{i>=s} N_i / prod_i N_i * D_main / D_s), N_GPT 4.6, targets (4, 2), D (256, 384, 512)
+#   -> [3.03, 1.24, 0.76]; base LR 6.25e-4 (paper, L) -> per-stage 1.89e-3 / 7.7e-4 / 4.7e-4 (ours: 1.2e-3 / 9.6e-4 / 8e-4).
+# Experiment: lab/experiments/refuted/2026-11-02-paper-lr-in-our-hnet.md
+defaults:
+  - blog_split_2stage
+  - _self_
+experiment:
+  name: blog_split_2stage_eq11lr
+train:
+  lr: 6.25e-4
+  lr_mult: [3.03, 1.24, 0.76]
