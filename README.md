@@ -38,7 +38,7 @@ Every claim is an experiment. Each experiment commits its predictions before the
 | 2 | Each stage holds its compression ratio | Holds in every run (gate: within 15% of 3 x 3) | the experiment gates |
 | 3 | Boundaries follow words | **Supported.** Stage 0 finds word starts with the spaces deleted. Stage-1 cuts match the blog's own figure chunks (F1 0.59 and 0.38, against 0.27 for a fixed-stride chunker). | [hidden words](lab/experiments/successes/2026-11-04-chunks-find-hidden-words.md), [blog texts](lab/experiments/successes/2026-11-05-chunks-match-blog-texts.md) |
 | 4 | Code compresses more than prose | Holds. H-Net bytes per stage-1 chunk divided by BPE bytes per token: Go 5.33, SQL 3.43, English 1.83. | [seeds vs BPE](lab/experiments/successes/2026-11-04-reference-layout-seeds-vs-bpe.md) |
-| 5 | Learned boundaries beat entropy-proxy boundaries | Running. The first entropy seed ended at 1.1378, worse than every learned seed. | [plan](lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md) |
+| 5 | Learned boundaries beat entropy-proxy boundaries | **Supported.** Entropy-proxy boundaries: 1.1378, 1.1400 (2 seeds), worse than every learned seed and than BPE. The gap (0.040 or more) is about 3x the blog's. | [learned vs entropy](lab/experiments/successes/2026-11-05-learned-vs-entropy-boundaries.md) |
 | 6 | Morpheme-like stage-0 cuts | Not seen. Our in-word cuts look like the 2025 router's, as the blog says. | [blog texts](lab/experiments/successes/2026-11-05-chunks-match-blog-texts.md) |
 | 7 | In-context tokenization: fewer chunks as a new word repeats | Not seen. Our chunk counts stay flat. The blog credits this to its new router. | [blog texts](lab/experiments/successes/2026-11-05-chunks-match-blog-texts.md) |
 
@@ -50,7 +50,7 @@ Many experiments failed, and they are kept on purpose. Most of `lab/experiments/
 
 - Packed inner levels (no padding) and compiled stack segments cut the step from 86.8 to about 71 ms ([note](.agents/notes/implemented/feature/2026-11-05-throughput-compile-and-packing.md)).
 - At matched FLOPs, the Mamba-2 H-Net trains at 1.46x the wall clock of BPE (73 against 50 ms/step). At d=256 the Mamba-2 kernels take 31 of the 71 ms.
-- An H-Net with attention-only outer stages runs at 54 ms/step. Its loss experiment is in progress ([plan](lab/experiments/planned/2026-11-05-attention-only-outer-stages.md)).
+- With MLP-free sliding-window attention in place of every outer Mamba-2 block, the H-Net trains at 1.13x BPE's wall clock per byte (53 ms/step). But it ends at 1.1764, above BPE. Its router still finds words. The arm also dropped every gated nonlinear map in the outer stages, so the next test adds a gated MLP to the attention blocks ([attention-only outer stages](lab/experiments/refuted/2026-11-05-attention-only-outer-stages.md)).
 
 ## Next
 

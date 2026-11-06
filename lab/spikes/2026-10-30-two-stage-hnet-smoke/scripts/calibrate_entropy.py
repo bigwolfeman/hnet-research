@@ -8,7 +8,7 @@ Pseudocode:
     H     = proxy next-byte entropy per byte (EntropyBoundaries.entropy)
     theta = boundaries.calibrate(H, ratios)       # stage s: 1 / prod(ratios[:s+1]) boundaries per byte, pooled
     print theta (for model.boundaries.thresholds) and the measured bytes per chunk per source and stage
-Experiment: lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md
+Experiment: lab/experiments/successes/2026-11-05-learned-vs-entropy-boundaries.md
 """
 from __future__ import annotations
 

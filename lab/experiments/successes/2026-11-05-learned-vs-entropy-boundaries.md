@@ -1,6 +1,6 @@
 # Experiment: learned vs entropy boundaries
 
-Status: planned
+Status: success
 
 Date proposed: 2026-11-05
 Algorithm: `lab/spikes/2026-10-30-two-stage-hnet-smoke/hnet/boundaries.py` (pseudocode there)
@@ -59,6 +59,50 @@ readings:  rung bpb, Go and SQL bpb, sem/* AUROC of the entropy boundaries vs th
 
 - Queue: after the seeds-vs-BPE queue. wandb project `hnet-router`, group `learned-vs-entropy-boundaries`.
 - Cost: proxy about 1 h; each entropy arm about 4.5 to 5 h (the reflayout step plus one proxy forward). About 11 h in total.
+
+## Results
+
+Runs: proxy byte_transformer seed 0, entropy_2stage seed 0 (wandb z8xxxblu, 2026-11-05 09:46 to 14:42) and seed 1 (wandb r5tq8a9q, 2026-11-06 04:54 to 09:45). Queue `ignored/runs/learned-vs-entropy-boundaries/` (chain.sh, then `ignored/runs/resume-chain-2026-11-06.sh` for seed 1). Code: the `entropy-boundaries` worktree at the commit that adds this file. Seed 1 first started on 2026-11-05 and was stopped at 12 minutes, before any `resume.pt`, to free the GPU; it then ran again from step 0.
+
+### Gates
+
+- Suite: 237 passed, 1 skipped (`HNET_TEST_CUDA=1`, suite.log), with `tests/test_boundaries.py`.
+- Proxy: the smoke trained; the full run (60,720 steps, 4.95M params) ended with finite loss.
+- Calibration (calibration.json, 256 val rows, train-mix weights): thresholds [1.0787, 2.4348] give ratios 3.0 and 3.0 pooled over the mix. Per domain: edu 2.82 and 8.34 bytes per chunk, Go 4.81 and 16.54.
+- Both seeds: edu ratios 2.84 and 2.96 at every eval (inside 2.55 to 3.45; frozen boundaries give the same value at every eval). Edu fwd FLOPs/byte 23.07M against 22.75M (+1.4%), proxy not counted.
+- Training bytes 12,582,912,000 (192,000 x 65,536). Finite loss.
+
+### Main prediction: edu val bpb at 12.58B bytes
+
+| arm | seed 0 | seed 1 | seed 2 |
+|---|---:|---:|---:|
+| end-to-end (reflayout_2stage) | 1.0905 | 1.0979 | 1.0913 |
+| entropy (entropy_2stage) | **1.1378** | **1.1400** | |
+
+The worst end-to-end seed (1.0979) is 0.040 below the best entropy seed (1.1378). All six pairs are in the predicted order. The entropy seeds differ by 0.002.
+
+### Other predictions
+
+- At the 0.79B rung, the entropy mean is below the end-to-end mean: **does not hold**. Entropy 1.3419, 1.3588 (mean 1.3504) against end-to-end 1.3185, 1.3587, 1.3206 (mean 1.3326). Only the late end-to-end seed 1 is level with the entropy arm at this rung.
+- Go lower in every end-to-end seed than in every entropy seed: **holds**. End-to-end 0.581, 0.587, 0.582 against entropy 0.712, 0.715.
+
+### Readings
+
+- Both entropy seeds are also above both BPE seeds (1.1156, 1.1109). With frozen entropy boundaries, the H-Net loses its lead over BPE at our scale.
+- SQL: entropy 1.479, 1.471 against end-to-end 1.189 to 1.218 and BPE 1.318 to 1.337.
+- The entropy boundaries cut code much less at stage 0: Go 5.22 bytes per chunk, against 2.58 in the end-to-end arm. The proxy predicts Go well, so few Go bytes cross theta_0.
+- Word alignment: sem/word_s0 AUROC 0.85 and sem/word_s1 0.82, against end-to-end seed 2 at 0.91 and 0.71. Both entropy seeds give the same boundary probes, because the same frozen proxy sets the boundaries.
+- In-context tokenization probe: stage-0 chunks for a repeated new word drop from 6.85 at the first occurrence to 1.80 at the fifth. The end-to-end seeds drop by 0.05, 0.05 and 0.00 (constitution item 7). The entropy rule gets this behavior for free: the proxy's entropy on a word falls once the word is in context.
+- coarse_shuffle_s0 rise: +1.16 bpb (seed 1), so the main network is in use.
+- Step time 84 ms (with the proxy forward) against about 73 ms for the end-to-end arm.
+
+## Verdict
+
+**Supported.** At 12.58B bytes, edu val bpb is lower in every end-to-end seed (1.0905, 1.0979, 1.0913) than in every entropy seed (1.1378, 1.1400).
+
+## Updated hypothesis
+
+At 42M params and 12.58B bytes, learned boundaries beat frozen entropy-proxy boundaries by 0.040 to 0.050 bpb on edu, about 3x the blog's 0.011 to 0.016 at 1e19 to 1e20 FLOPs. The entropy arm also loses to BPE, so in our setup the H-Net's lead over BPE needs the learned router. The entropy arm was not ahead early either: learned boundaries are at least level by 0.79B bytes. Constitution checklist item 5 holds at our scale. The entropy rule does show in-context tokenization, which our learned router does not; a router that reads the context the way the proxy does may be what the blog's new router adds.
 
 ## Related
 

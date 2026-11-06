@@ -26,4 +26,4 @@ Constitution 1.2.0 checklist item 5 asks whether learned boundaries beat boundar
 - Building a model whose config has `model.boundaries` loads the proxy checkpoint. The path must exist wherever such a checkpoint is evaluated.
 - A training step costs one extra proxy forward (estimate 15-20% at our sizes; the smoke measures it).
 - Tests: `tests/test_boundaries.py` covers calibration rates, the router contract, chunking exactly at the masks (stage 1 inside stage 0), causality, the proxy staying out of the model and its gradients, and loud misconfiguration.
-- First use: [learned vs entropy boundaries](../../../../lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md).
+- First use: [learned vs entropy boundaries](../../../../lab/experiments/successes/2026-11-05-learned-vs-entropy-boundaries.md).

@@ -4,7 +4,7 @@
 #   layout  t4 | T1t4 | T10 | t4T1 | t4
 #   windows stage 0: 704 keys, so a t block's fwd FLOPs/position match the m block's (0.994x at L 4096);
 #           stage 1: 1024 keys (0.975x of m at L 4096 / 3.15). Model fwd FLOPs/byte stay within 1% of reflayout_2stage.
-# Experiment: lab/experiments/planned/2026-11-05-attention-only-outer-stages.md
+# Experiment: lab/experiments/refuted/2026-11-05-attention-only-outer-stages.md
 defaults:
   - reflayout_2stage
   - _self_

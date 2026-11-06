@@ -10,7 +10,7 @@ Pseudocode:
     calibrate(rows, ratios): theta_s = quantile of H over calibration bytes (t > 0) at 1 - 1 / prod(ratios[:s+1])
 Causal: b_t depends on x_<t only. The proxy's FLOPs are not counted (as in the blog).
 model.boundaries config:  {kind: entropy, proxy: <final.pt of a byte LM>, thresholds: [theta_0, theta_1, ...]}
-Experiment: lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md
+Experiment: lab/experiments/successes/2026-11-05-learned-vs-entropy-boundaries.md
 """
 from __future__ import annotations
 

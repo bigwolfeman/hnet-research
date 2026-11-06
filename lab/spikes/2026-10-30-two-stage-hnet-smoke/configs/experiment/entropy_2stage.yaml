@@ -3,7 +3,7 @@
 # LM's next-byte entropy (hnet/boundaries.py) in place of the learned routers. Same layout, widths, ratios (3 x 3,
 # set by the thresholds), LR. No router parameters, no ratio loss, no RatioController.
 # Set model.boundaries.proxy and model.boundaries.thresholds (scripts/calibrate_entropy.py) on the command line.
-# Experiment: lab/experiments/planned/2026-11-05-learned-vs-entropy-boundaries.md
+# Experiment: lab/experiments/successes/2026-11-05-learned-vs-entropy-boundaries.md
 defaults:
   - reflayout_2stage
   - _self_

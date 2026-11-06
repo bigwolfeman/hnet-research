@@ -87,7 +87,7 @@ The worst H-Net seed (1.0979) is 0.013 below the best BPE seed (1.1109). All six
 
 - Crossings against BPE seed 1: H-Net seed 0 at 2.23B, seed 1 at 6.82B (one recross at 6.95B, then below from 7.21B), seed 2 at 2.49B. Two of three seeds come online early; seed 1 is the late one.
 - Throughput: H-Net seed 2 trained at 886 kB/s (74.0 ms/step with evals and probes) against BPE seed 1 at 1,384 kB/s (50.5 ms/step). At matched FLOPs/byte, the H-Net costs 1.56x the wall clock of BPE.
-- H-Net seed 2 final probes: sem/word_s0 AUROC 0.908, sem/hidden_s0 0.794; coarse_shuffle_s0 +0.81 bpb, so the main network is in use.
+- H-Net seed 2 final probes: sem/word_s0 AUROC 0.908, sem/hidden_s0 0.794; coarse_shuffle_s0 rise +1.90 bpb, so the main network is in use.
 
 ## Verdict
 
