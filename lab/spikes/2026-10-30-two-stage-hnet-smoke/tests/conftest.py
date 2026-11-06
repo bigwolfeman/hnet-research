@@ -14,6 +14,7 @@ ROUTER_VARIANTS = {
     "eoc": ("eoc", {"read_own_end": True, "force_last": False}),
     "eoc_lag": ("eoc", {"read_own_end": False, "force_last": True}),
     "lookahead": ("lookahead", {}),
+    "surprise": ("surprise", {}),   # stage 0 only: deeper stages get lookahead (make_cfg)
 }
 
 
@@ -23,7 +24,7 @@ def make_cfg(router: str = "eoc", n_stages: int = 2, multiple: int = 32, attn_im
     stages = []
     windows = [64, 32, 16]
     for s in range(n_stages):
-        name, kw = ROUTER_VARIANTS[router]
+        name, kw = ROUTER_VARIANTS["lookahead" if router == "surprise" and s > 0 else router]
         kw = dict(kw) if force_last is None or name != "eoc" else dict(kw, force_last=force_last)
         enc, dec = stage_layers[s] if stage_layers else (1, 1)
         stages.append(dict(enc_layers=enc, dec_layers=dec, window=windows[s], main_read=main_read,

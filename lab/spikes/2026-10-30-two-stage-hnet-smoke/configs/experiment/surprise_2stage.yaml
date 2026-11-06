@@ -1,0 +1,26 @@
+# @package _global_
+# reflayout_2stage with the stage-0 router "surprise" (hnet/routers.py): the lookahead cosine plus the encoder's own
+# next-byte entropy, all trained end to end. The aux head's CE (weight lm_weight) trains the head and the encoder.
+# The entropy is standardized by running stats (momentum 0.1, the BatchNorm default); tau is in std units, init 0.
+# Stage 1 keeps lookahead.
+# Experiment: lab/experiments/planned/2026-11-06-surprise-router-in-context-tokenization.md
+defaults:
+  - reflayout_2stage
+  - _self_
+experiment:
+  name: surprise_2stage
+model:
+  stages:
+    - enc_layers: 4
+      dec_layers: 4
+      enc_layout: m4
+      dec_layout: m4
+      window: 1024
+      router: {name: surprise, target_ratio: 3.0, loss_weight: 0.03,
+               kwargs: {lm_weight: 1.0, beta_init: 1.0, tau_init: 0.0, momentum: 0.1}}
+    - enc_layers: 5
+      dec_layers: 5
+      enc_layout: T1m4
+      dec_layout: m4T1
+      window: 1024
+      router: {name: lookahead, target_ratio: 3.0, loss_weight: 0.03, kwargs: {}}

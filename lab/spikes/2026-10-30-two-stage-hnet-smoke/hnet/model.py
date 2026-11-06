@@ -75,6 +75,10 @@ class HNetLM(nn.Module):
             raise ValueError("model.boundaries is set: every stage router must be 'given'")
         # plain attribute, not a submodule: the frozen proxy stays out of parameters(), the optimizer and state_dict
         self.boundary_source = build_boundaries(bcfg, self.n_stages, "cpu")
+        deep = [i for i, st in enumerate(self.stages()) if st.router.needs_next and i > 0]
+        if deep:
+            raise ValueError(f"routers that need the next byte work at stage 0 only; stages {deep} have one")
+        self.needs_next = bool(self.stages()) and self.stages()[0].router.needs_next
 
     def _apply(self, fn, recurse=True):
         """.to() / .cuda() also move the boundary proxy (not a registered submodule)."""
@@ -135,7 +139,12 @@ class HNetLM(nn.Module):
             lengths = torch.full((B,), L, device=x.device, dtype=torch.long)
         pos = torch.arange(L, device=x.device)[None, :].expand(B, -1)
         given = None if self.boundary_source is None else self.boundary_source(x, lengths)
-        h, aux = self.net(self.embed(x), lengths, pos, given=given)
+        if self.needs_next:   # the byte after each position; -100 past the last valid byte (router "surprise")
+            nxt = torch.where(pos[:, :-1] < (lengths[:, None] - 1), x[:, 1:].long(), -100)
+            nxt = torch.cat([nxt, torch.full_like(nxt[:, :1], -100)], dim=1)
+            h, aux = self.net(self.embed(x), lengths, pos, given=given, nxt=nxt)
+        else:
+            h, aux = self.net(self.embed(x), lengths, pos, given=given)
         return LMOutput(self.head(h), aux)
 
     def stages(self) -> list[Stage]:
@@ -206,11 +215,13 @@ def lm_loss(logits, y, lengths):
 
 
 def total_loss(out: LMOutput, y, lengths, lam: torch.Tensor | None = None):
-    """CE + sum_s (loss_weight_s * ratio_loss_s + lam_s * G_s). lam: per-stage RatioController multipliers; None = off."""
+    """CE + sum_s (loss_weight_s * ratio_loss_s + router_loss_s + lam_s * G_s). lam: per-stage RatioController
+    multipliers; None = off. router_loss: a router's own weighted loss (router "surprise"), else none."""
     ce = lm_loss(out.logits, y, lengths)
     if not out.aux:
         return ce, ce
     loss = ce + sum(a.loss_weight * a.ratio_loss for a in out.aux)
+    loss = loss + sum(a.router_loss for a in out.aux if a.router_loss is not None)
     if lam is not None:
         loss = loss + (lam * torch.stack([a.p_mean for a in out.aux])).sum()
     return loss, ce

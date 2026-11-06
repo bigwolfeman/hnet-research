@@ -10,7 +10,7 @@ Counting rules (forward pass; 1 multiply-add = 2 FLOPs):
         L <= w : (L + 1) / 2
         L >  w : (w (w + 1) / 2 + (L - w) w) / L
     Only causal attention work is counted (no masked-out half).
-    Router: lookahead 2 d^2 * 2 (q and k projections), eoc 2 d. Residual proj 2 d^2. LM head 2 d_0 V.
+    Router: lookahead 2 d^2 * 2 (q and k projections), surprise lookahead + 2 d V (next-byte head), eoc 2 d. Residual proj 2 d^2. LM head 2 d_0 V.
     main_read (hnet/mainread.py) at stage s, per stage-s position: q and out proj 4 d^2 + attention 4 d * mean_ctx
     over the main positions (L_s / prod(ratios[s:]), causal, global); per main position: k and v proj 4 d^2.
     Main with loops R (weight-tied): R x its stack's FLOPs.
@@ -86,7 +86,7 @@ def flops_per_byte(cfg: dict, seq_len: int, measured_ratios: list[float]) -> dic
         enc = layout_flops(enc_layout, d, h, L, st["window"], ssm)
         dec = layout_flops(dec_layout, d, h, L, st["window"], ssm)
         rname = st["router"]["name"]
-        router = {"lookahead": 4 * d * d, "given": 0}.get(rname, 2 * d)
+        router = {"lookahead": 4 * d * d, "given": 0, "surprise": 4 * d * d + 2 * d * 256}.get(rname, 2 * d)
         extra = router + 2 * d * d
         r = measured_ratios[s]
         if st.get("main_read"):

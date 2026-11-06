@@ -412,6 +412,12 @@ def main(cfg: DictConfig):
                 last[f"train/ratio_loss_s{s}"] = float(a.ratio_loss.detach())
                 last[f"train/p_mean_s{s}"] = float(a.p_mean.detach())
                 last[f"train/ratio_lambda_s{s}"] = float(ratio_ctl.lam[s]) if ratio_ctl else 0.0
+                if a.router_loss is not None:   # router "surprise": weighted next-byte CE of its aux head
+                    last[f"train/router_loss_s{s}"] = float(a.router_loss.detach())
+            for s, st in enumerate(model.stages() if hasattr(model, "stages") else []):
+                for k in ("beta", "tau"):   # router "surprise": learned entropy scale and threshold
+                    if hasattr(st.router, k):
+                        last[f"train/router_{k}_s{s}"] = float(getattr(st.router, k).detach())
             last.update({f"train/{k}": float(v) for k, v in jm.items()})
             if leaf_stats is not None:
                 last.update({f"train/{k}": v for k, v in leaf_stats().items()})

@@ -126,8 +126,8 @@ def test_stage0_reads_main_outputs():
     plan_fwd = {}
     for k, st in enumerate((st0, st1)):
         pre = st._pre_fn
-        def pre_spy(e, lengths, given=None, _pre=pre, _k=k):
-            out = _pre(e, lengths, given); plan_fwd[_k] = out[4]; return out
+        def pre_spy(e, lengths, given=None, nxt=None, *, _pre=pre, _k=k):
+            out = _pre(e, lengths, given, nxt); plan_fwd[_k] = out[4]; return out
         st._pre_fn = pre_spy
     x = torch.randint(0, 256, (2, 256))
     with torch.no_grad():

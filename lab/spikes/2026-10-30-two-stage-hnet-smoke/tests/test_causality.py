@@ -18,8 +18,20 @@ TOL = 1e-4
 def build(router, shape, seed=0, **kw):
     n_stages, stage_layers = SHAPES[shape]
     torch.manual_seed(seed)
-    m = HNetLM(make_cfg(router, n_stages, stage_layers=stage_layers, **kw)).eval()
-    return randomize(m, seed=seed)
+    m = randomize(HNetLM(make_cfg(router, n_stages, stage_layers=stage_layers, **kw)).eval(), seed=seed)
+    if router == "surprise":   # random beta/tau swamp the cosine term: center the entropy term on the head's
+        r = m.stages()[0].router   # measured mean entropy, so both terms move p (a leak through either one shows)
+        ents = []
+        hook = r.lm.register_forward_hook(
+            lambda mod, inp, out: ents.append(-(out.softmax(-1) * out.log_softmax(-1)).sum(-1)))
+        with torch.no_grad():
+            m(torch.randint(0, 256, (2, L), generator=torch.Generator().manual_seed(seed)))
+            hook.remove()
+            r.h_mean.fill_(float(ents[0].mean()))   # eval mode reads the running stats: set them to this head's
+            r.h_var.fill_(float(ents[0].var()))
+            r.tau.fill_(0.0)
+            r.beta.fill_(1.0)
+    return m
 
 
 def pad_to(x, multiple):
@@ -28,7 +40,7 @@ def pad_to(x, multiple):
     return torch.cat([x, torch.randint(0, 256, (x.shape[0], tgt - n))], 1)  # random pad bytes on purpose
 
 
-@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead"])
+@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead", "surprise"])
 @pytest.mark.parametrize("shape", list(SHAPES))
 def test_boundaries_nondegenerate(router, shape):
     """The causality tests are only meaningful if chunking is neither all-ones nor a single chunk."""
@@ -40,7 +52,7 @@ def test_boundaries_nondegenerate(router, shape):
         assert 0.1 < float(a.frac) < 0.9, f"degenerate chunking frac={float(a.frac)}"
 
 
-@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead"])
+@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead", "surprise"])
 @pytest.mark.parametrize("shape", list(SHAPES))
 @pytest.mark.parametrize("seed", [0, 1])
 def test_perturb_future(router, shape, seed):
@@ -60,7 +72,7 @@ def test_perturb_future(router, shape, seed):
                 assert (got[:, t + 1:] - base[:, t + 1:]).abs().max().item() > 1e-3
 
 
-@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead"])
+@pytest.mark.parametrize("router", ["eoc", "eoc_lag", "lookahead", "surprise"])
 @pytest.mark.parametrize("shape", list(SHAPES))
 @pytest.mark.parametrize("multiple", [32, 128])
 def test_prefix_equals_full(router, shape, multiple):

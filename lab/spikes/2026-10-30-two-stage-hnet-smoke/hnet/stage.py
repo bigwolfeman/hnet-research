@@ -61,6 +61,7 @@ class StageAux:
     main_idx: torch.Tensor | None = None   # (B,L) last main chunk each input position of this stage can see, -1: none
     p: torch.Tensor | None = None          # (B,L) detached fp32 router boundary prob at each input position
     in_pos: torch.Tensor | None = None     # (B,L) byte position of each input position (hnet/semantics.py)
+    router_loss: torch.Tensor | None = None  # scalar, already weighted (router "surprise": next-byte CE); None: none
 
 
 class Main(nn.Module):
@@ -129,16 +130,17 @@ class Stage(nn.Module):
         self._pack_fn = pack_index
 
     # The forward is three pure pieces around the one host sync (M). Each piece compiles as one graph.
-    def _pre(self, e, lengths, given=None):
-        """Residual, router plan, anchor counts and ratio loss. No host sync. given: frozen boundaries (B,L) or None."""
+    def _pre(self, e, lengths, given=None, nxt=None):
+        """Residual, router plan, anchor counts and ratio loss. No host sync. given: frozen boundaries (B,L) or None.
+        nxt: next byte per position (B,L) for a router with needs_next, else None."""
         B, L, _ = e.shape
         valid = torch.arange(L, device=e.device)[None, :] < lengths[:, None]
         with torch.autocast(device_type=e.device.type, enabled=False):
             resid = self.residual_proj(e.float())
-        plan = self.router(e, lengths, given)
+        plan = self.router(e, lengths, given, nxt)
         counts = plan.mask.sum(dim=1)
         rl, frac, p_mean = ratio_loss(plan.p, plan.mask, valid, self.target_ratio)
-        return resid, plan.p, plan.mask, plan.conf, plan.read_idx, counts, rl, frac, p_mean
+        return resid, plan.p, plan.mask, plan.conf, plan.read_idx, counts, rl, frac, p_mean, plan.aux_loss
 
     def _gather_in(self, e, p, mask, counts, pos, M: int):
         """Gather anchor states into the (B,M,d_inner) input of the inner net."""
@@ -175,12 +177,14 @@ class Stage(nn.Module):
         if self.main_read is not None:
             self._read_fn = torch.compile(self.main_read.forward, dynamic=True)
 
-    def forward(self, h, lengths, pos, pack: Pack | None = None, given=None):
+    def forward(self, h, lengths, pos, pack: Pack | None = None, given=None, nxt=None):
         """given: frozen boundaries, a list of (B, L_bytes) bool masks, one per stage from this one inward
-        (hnet/boundaries.py); this stage reads its own at the byte position of each input. None: the router decides."""
+        (hnet/boundaries.py); this stage reads its own at the byte position of each input. None: the router decides.
+        nxt: (B,L) next byte per input position, for a stage-0 router with needs_next (HNetLM.forward); inner
+        stages never get it."""
         e = self.encoder(h, pack)
         g = None if given is None else gather_rows(given[0], pos)
-        resid, p, mask, conf, read_idx, counts, rl, frac, p_mean = self._pre_fn(e, lengths, g)
+        resid, p, mask, conf, read_idx, counts, rl, frac, p_mean, router_loss = self._pre_fn(e, lengths, g, nxt)
         M, total, m_max = chunk_stats(counts, e.shape[1], self.multiple)  # the one host sync of this stage
         x, pos_in, p_c = self._gather_fn(e, p, mask, counts, pos, M)
         inner_pack = None
@@ -209,7 +213,7 @@ class Stage(nn.Module):
         aux = StageAux(ratio_loss=rl, frac=frac, counts=counts, lengths=lengths, pos=pos_in,
                        anchor=self.router.anchor, p_mean=p_mean,
                        target_ratio=self.target_ratio, loss_weight=self.loss_weight,
-                       main_out=main_out, main_idx=main_idx, p=p.detach(), in_pos=pos)
+                       main_out=main_out, main_idx=main_idx, p=p.detach(), in_pos=pos, router_loss=router_loss)
         return out, [aux] + inner_aux
 
     def init_weights(self, std: float, n_res: int):
